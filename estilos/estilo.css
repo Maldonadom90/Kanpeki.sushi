@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 *{
-    font-family: 'Indie Flower';
+    font-family: font-family: 'Roboto', sans-serif;;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -103,27 +103,86 @@
     background-color: rgba(255, 145, 0, 0.795);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border: 5px inset  #403925;
+    justify-content: center ;
 }
 /*diseño redes*/
 .redes{
     padding: 50px;
-    border: 2px dashed #403925;
     width: 400px;
-    height: 100%;
     text-align: center;
     color: black;
 }
 .redes li{
     display: inline-block;
 }
+.redes h3{
+    font-size: 24px;
+}
+.redes > ul li i{
+    font-size: 24px;
+}
 /*diseño zona*/
 .zona{
     padding: 50px;
-    border: 2px dashed #403925;
     width: 400px;
-    height: 100%;
     text-align: center;
     color: black;
+}
+.zona h3{
+    font-size: 24px;
+}
+.zona p{
+    font-size: 20px;
+}
+/*pagina woks & bowls*/
+.body-wok{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imagenes/fondo\ woks.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#foot-wok{
+    position: absolute;
+    bottom: 0px;
+}
+.body-wok nav{
+    position: absolute;
+    left: 100px;
+
+}
+.navbar-brand img{
+    width: 200px;
+}
+.nav-link{
+    font-size: 24px;
+}
+.wok-menu{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 80%;
+    height: 400px;
+    background-color: rgba(241, 243, 243, 0.925);
+    border: 2px outset black;
+}
+.wok-menu h2{
+    position: absolute;
+    right: 40px;
+}
+#wok-logo{
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+.wok-p{
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    right: 15px;
+    border: 2px dashed sandybrown;
+}
+.wok-p > p{
+    font-size: 20px;
 }
