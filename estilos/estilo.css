@@ -107,7 +107,7 @@
 }
 /*diseño redes*/
 .redes{
-    padding: 50px;
+    padding: 40px;
     width: 400px;
     text-align: center;
     color: black;
@@ -116,23 +116,23 @@
     display: inline-block;
 }
 .redes h3{
-    font-size: 24px;
+    font-size: 18px;
 }
 .redes > ul li i{
-    font-size: 24px;
+    font-size: 18px;
 }
 /*diseño zona*/
 .zona{
-    padding: 50px;
+    padding: 40px;
     width: 400px;
     text-align: center;
     color: black;
 }
 .zona h3{
-    font-size: 24px;
+    font-size: 19px;
 }
 .zona p{
-    font-size: 20px;
+    font-size: 18px;
 }
 /*pagina woks & bowls*/
 .body-wok{
@@ -149,27 +149,28 @@
 }
 .body-wok nav{
     position: absolute;
-    left: 100px;
+    left: 90px;
 
 }
 .navbar-brand img{
     width: 200px;
 }
 .nav-link{
-    font-size: 24px;
+    font-size: 15px;
 }
 .wok-menu{
     position: absolute;
-    top: 150px;
-    left: 100px;
+    top: 130px;
+    left: 80px;
     width: 80%;
-    height: 400px;
+    height: 330px;
     background-color: rgba(241, 243, 243, 0.925);
     border: 2px outset black;
 }
 .wok-menu h2{
     position: absolute;
-    right: 40px;
+    top: 15px;
+    right: 30px;
 }
 #wok-logo{
     position: absolute;
@@ -184,5 +185,5 @@
     border: 2px dashed sandybrown;
 }
 .wok-p > p{
-    font-size: 20px;
+    font-size: 15px;
 }
