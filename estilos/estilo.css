@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
 *{
     font-family: 'Roboto', sans-serif;;
     margin: 0;
@@ -6,71 +7,57 @@
     box-sizing: border-box;
 }
 /*inicio estilo menú*/
-.borde{
-    border: 3px outset rgba(14, 13, 13, 0.685);
+html{
+    height: 100%;
 }
+.inicio-body{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../imagenes/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #logo img{
-    width: fit-content;
-    height: 600px;
+    width: 200px;
 }
 #logo{
     grid-area: logo;
-    background-color: rgba(255, 145, 0, 0.795);
-    height: 80vh;
+    background-color: #04bfbf23;
+    border-radius: 20%;
 }
 /*diseño de entradas*/
 #entrada{
     grid-area: entrada;
-    background-color: rgba(255, 0, 255, 0.808);
-    height: 40vh;
 }
 #entrada a{
-    font-size: 70px;
-    display: flex;
-    justify-content: center;
-}
-#entrada:hover{
-    background-color: black;
-    opacity: 0.8;
+    font-size: 20px;
 }
 /*diseño de woks*/
 #woks{
     grid-area: woks;
-    background-color: rgba(0, 255, 255, 0.76);
-    height: 40vh;
 }
 #woks a{
-    font-size: 70px;
-}
-#woks:hover{
-    background-color: black;
-    opacity: 0.8;
+    font-size: 20px;
 }
 /*diseño de sushi*/
 #sushi{
     grid-area: sushi;
-    background-color: rgba(0, 255, 255, 0.76);
-    height: 40vh;
 }
 #sushi a{
-    font-size: 70px;
-}
-#sushi:hover{
-    background-color: black;
-    opacity: 0.8;
+    font-size: 20px;
 }
 /*diseño contacto*/
 #contacto{
     grid-area: contacto;
-    background-color: rgba(255, 0, 255, 0.808);
-    height: 40vh;
 }
 #contacto a{
-    font-size: 70px;
-}
-#contacto:hover{
-    background-color: black;
-    opacity: 0.9;
+    font-size: 18px;
 }
 /*diseño nav*/
 .nav{
@@ -78,11 +65,21 @@
     height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "entrada logo  logo   sushi"
-    "woks    logo  logo  contacto";
+    "... ...      ...      ..."
+    "... logo     logo     ..."
+    "... ...      ...      ..."
+    "... ...      ...      ..."
+    "... ...      ...      ..."
+    "... ...      ...      ..."
+    "... entrada  entrada  ..."
+    "... woks     woks     ..."
+    "... sushi    sushi    ..."
+    "... ...      ...      ..."
+    "... contacto contacto ...";
     align-items: center;
+    gap: 2em;
 }
 .nav > div{
     display: flex;
@@ -91,24 +88,205 @@
 }
 .nav >div a{
     color: black;
-    font-size: 2rem;
     text-decoration: none;
 }
+.boton {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .1px inset var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 10px;
+    color: var(--color);
+}
+.boton::after, .boton::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+.boton::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+.boton:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+.boton:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+.boton:hover {
+    color: var(--color2);
+    transform: scale(1.2);
+}
+.boton:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
 /*fin estilo menú*/
+/*pagina woks & bowls*/
+.body-wok{
+    width: 100%;
+    min-height: 100%;
+    background-image: url(../imagenes/fuego.png);
+    background-repeat: space;
+    background-size: 45px;
+    background-color: #04BFBF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navbar{
+    background-color: #04bfbfee !important;
+}
+
+.navbar-brand img{
+    width: 150px;
+}
+.nav-link{
+    font-size: 15px;
+}
+.wok-main{
+    width: 100%;
+    padding: 0.5rem;
+}
+.wok-menu{
+    margin-inline: 3px;
+    padding: 1rem;
+    width: 100%;
+    background-color: #caf4e1d8;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23070707' fill-opacity='0.11'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5%;
+}
+#wok-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#wok-logo img{
+    width: 30px;
+}
+.wok-p{
+    margin: 3px;
+    border: 2px dashed sandybrown;
+    border-radius: 5%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(11, 0.5fr);
+    grid-template-areas: 
+    "... arroz  arroz  arroz  parroz"
+    "... agrid  agrid  agrid  pagrid"
+    "... ...    ...    ...    ..."
+    "... suey   fan    mein   pmein"
+    "... ...    ...    ...    ..."
+    "... hongo  hongo  ...    prehongo"
+    "... pollo  pollo  ...    prepollo"
+    "... cerdo  cerdo  ...    precerdo"
+    "... lango  lango  ...    prelango"
+    "... salm   salm   ...    presalm"
+    "... lomo   lomo   ...    prelomo";
+}
+#arroz{
+    grid-area: arroz;
+}
+#darroz{
+    grid-area: darroz;
+}
+#parroz{
+    grid-area: parroz;
+}
+#agrid{
+    grid-area: agrid;
+}
+#pagrid{
+    grid-area: pagrid;
+}
+#mein{
+    grid-area: mein;
+}
+#pmein{
+    grid-area: pmein;
+}
+#fan{
+    grid-area: fan;
+}
+#suey{
+    grid-area: suey;
+}
+#hongo{
+    grid-area: hongo;
+}
+#prehongo{
+    grid-area: prehongo;
+}
+#pollo{
+    grid-area: pollo;
+}
+#prepollo{
+    grid-area: prepollo;
+}
+#cerdo{
+    grid-area: cerdo;
+}
+#precerdo{
+    grid-area: precerdo;
+}
+#lango{
+    grid-area: lango;
+}
+#prelango{
+    grid-area: prelango;
+}
+#salm{
+    grid-area: salm;
+}
+#presalm{
+    grid-area: presalm;
+}
+#lomo{
+    grid-area: lomo;
+}
+#prelomo{
+    grid-area: prelomo;
+}
+
+
+.wok-p > p{
+    font-size: 15px;
+}
 
 /*inicio footer*/
 .foot {
     width: 100%;
-    height: 20vh;
-    background-color: rgba(255, 145, 0, 0.795);
+    background-color: #04bfbfe1;
     display: flex;
     flex-direction: row;
     justify-content: center ;
 }
 /*diseño redes*/
 .redes{
-    padding: 40px;
-    width: 400px;
+    padding: 5px;
+    width: 300px;
     text-align: center;
     color: black;
 }
@@ -116,75 +294,21 @@
     display: inline-block;
 }
 .redes h3{
-    font-size: 16px;
+    font-size: 14px;
 }
 .redes > ul li i{
-    font-size: 16px;
+    font-size: 14px;
 }
 /*diseño zona*/
 .zona{
-    padding: 40px;
+    padding: 5px;
     width: 400px;
     text-align: center;
     color: black;
 }
 .zona h3{
-    font-size: 17px;
+    font-size: 14px;
 }
 .zona p{
-    font-size: 16px;
-}
-
-/*pagina woks & bowls*/
-.body-wok{
-    width: 100%;
-    height: 100vh;
-    background-image: url(../imagenes/fondo\ woks.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-#foot-wok{
-    position: absolute;
-    bottom: 0px;
-}
-.body-wok nav{
-    position: absolute;
-    left: 90px;
-
-}
-.navbar-brand img{
-    width: 200px;
-}
-.nav-link{
-    font-size: 15px;
-}
-.wok-menu{
-    position: absolute;
-    top: 130px;
-    left: 80px;
-    width: 80%;
-    height: 330px;
-    background-color: rgba(241, 243, 243, 0.925);
-    border: 2px outset black;
-}
-.wok-menu h2{
-    position: absolute;
-    top: 15px;
-    right: 30px;
-}
-#wok-logo{
-    position: absolute;
-    top: 15px;
-    left: 30px;
-}
-.wok-p{
-    position: absolute;
-    top: 60px;
-    left: 15px;
-    right: 15px;
-    border: 2px dashed sandybrown;
-}
-.wok-p > p{
-    font-size: 15px;
+    font-size: 14px;
 }
