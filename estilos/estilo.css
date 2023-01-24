@@ -1,314 +1,595 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
-
-*{
-    font-family: 'Roboto', sans-serif;;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,900&family=Roboto:wght@100;300;400&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+*::-moz-selection {
+  background-color: black;
+  color: whitesmoke;
+}
+*::selection {
+  background-color: black;
+  color: whitesmoke;
+}
+
 /*inicio estilo menú*/
-html{
-    height: 100%;
-}
-.inicio-body{
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    background-image: url(../imagenes/fondo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+html {
+  height: 100%;
 }
 
-#logo img{
-    width: 200px;
+.inicio-body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(../imagenes/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#logo{
-    grid-area: logo;
-    background-color: #04bfbf23;
-    border-radius: 20%;
+
+#logo img {
+  width: 200px;
 }
+
+#logo {
+  grid-area: logo;
+  background-color: rgba(4, 191, 191, 0.137254902);
+  border-radius: 20%;
+}
+
 /*diseño de entradas*/
-#entrada{
-    grid-area: entrada;
+#entrada {
+  grid-area: entrada;
 }
-#entrada a{
-    font-size: 20px;
+
+#entrada a {
+  font-size: 20px;
 }
+
 /*diseño de woks*/
-#woks{
-    grid-area: woks;
+#woks {
+  grid-area: woks;
 }
-#woks a{
-    font-size: 20px;
+
+#woks a {
+  font-size: 20px;
 }
+
 /*diseño de sushi*/
-#sushi{
-    grid-area: sushi;
+#sushi {
+  grid-area: sushi;
 }
-#sushi a{
-    font-size: 20px;
+
+#sushi a {
+  font-size: 20px;
 }
+
 /*diseño contacto*/
-#contacto{
-    grid-area: contacto;
+#contacto {
+  grid-area: contacto;
 }
-#contacto a{
-    font-size: 18px;
+
+#contacto a {
+  font-size: 18px;
 }
+
 /*diseño nav*/
-.nav{
-    width: 100%;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "... ...      ...      ..."
-    "... logo     logo     ..."
-    "... ...      ...      ..."
-    "... ...      ...      ..."
-    "... ...      ...      ..."
-    "... ...      ...      ..."
-    "... entrada  entrada  ..."
-    "... woks     woks     ..."
-    "... sushi    sushi    ..."
-    "... ...      ...      ..."
-    "... contacto contacto ...";
-    align-items: center;
-    gap: 2em;
+.nav {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "... ...      ...      ..." "... logo     logo     ..." "... ...      ...      ..." "... ...      ...      ..." "... ...      ...      ..." "... ...      ...      ..." "... entrada  entrada  ..." "... woks     woks     ..." "... sushi    sushi    ..." "... ...      ...      ..." "... contacto contacto ...";
+  align-items: center;
+  gap: 2em;
 }
-.nav > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.nav > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nav >div a{
-    color: black;
-    text-decoration: none;
+
+.nav > div a {
+  color: black;
+  text-decoration: none;
 }
+
 .boton {
-    --color: #00A97F;
-    --color2: rgb(10, 25, 30);
-    padding: 0.8em 1.75em;
-    background-color: transparent;
-    border-radius: 6px;
-    border: .1px inset var(--color);
-    transition: .5s;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    z-index: 1;
-    font-weight: 300;
-    font-size: 10px;
-    color: var(--color);
+  --color: #00A97F;
+  --color2: rgb(10, 25, 30);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 0.1px inset var(--color);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 10px;
+  color: var(--color);
 }
+
 .boton::after, .boton::before {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100%;
-    transform: skew(90deg) translate(-50%, -50%);
-    position: absolute;
-    inset: 50%;
-    left: 25%;
-    z-index: -1;
-    transition: .5s ease-out;
-    background-color: var(--color);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: var(--color);
 }
+
 .boton::before {
-    top: -50%;
-    left: -25%;
-    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
 }
+
 .boton:hover::before {
-    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
 }
+
 .boton:hover::after {
-    transform: skew(45deg) translate(-50%, -50%);
+  transform: skew(45deg) translate(-50%, -50%);
 }
+
 .boton:hover {
-    color: var(--color2);
-    transform: scale(1.2);
+  color: var(--color2);
+  transform: scale(1.2);
 }
+
 .boton:active {
-    filter: brightness(.7);
-    transform: scale(.98);
+  filter: brightness(0.7);
+  transform: scale(0.98);
 }
+
 /*fin estilo menú*/
-/*pagina woks & bowls*/
-.body-wok{
-    width: 100%;
-    min-height: 100%;
-    background-image: url(../imagenes/fuego.png);
-    background-repeat: space;
-    background-size: 45px;
-    background-color: #04BFBF;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.navbar {
+  background-color: rgba(4, 191, 191, 0.9333333333) !important;
 }
-.navbar{
-    background-color: #04bfbfee !important;
+.navbar .navbar-brand img {
+  width: 150px;
+}
+.navbar .nav-link {
+  font-size: 15px;
 }
 
-.navbar-brand img{
-    width: 150px;
-}
-.nav-link{
-    font-size: 15px;
-}
-.wok-main{
-    width: 100%;
-    padding: 0.5rem;
-}
-.wok-menu{
-    margin-inline: 3px;
-    padding: 1rem;
-    width: 100%;
-    background-color: #caf4e1d8;
-    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23070707' fill-opacity='0.11'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 5%;
-}
-#wok-logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#wok-logo img{
-    width: 30px;
-}
-.wok-p{
-    margin: 3px;
-    border: 2px dashed sandybrown;
-    border-radius: 5%;
-    padding: 5px;
-    display: grid;
-    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(11, 0.5fr);
-    grid-template-areas: 
-    "... arroz  arroz  arroz  parroz"
-    "... agrid  agrid  agrid  pagrid"
-    "... ...    ...    ...    ..."
-    "... suey   fan    mein   pmein"
-    "... ...    ...    ...    ..."
-    "... hongo  hongo  ...    prehongo"
-    "... pollo  pollo  ...    prepollo"
-    "... cerdo  cerdo  ...    precerdo"
-    "... lango  lango  ...    prelango"
-    "... salm   salm   ...    presalm"
-    "... lomo   lomo   ...    prelomo";
-}
-#arroz{
-    grid-area: arroz;
-}
-#darroz{
-    grid-area: darroz;
-}
-#parroz{
-    grid-area: parroz;
-}
-#agrid{
-    grid-area: agrid;
-}
-#pagrid{
-    grid-area: pagrid;
-}
-#mein{
-    grid-area: mein;
-}
-#pmein{
-    grid-area: pmein;
-}
-#fan{
-    grid-area: fan;
-}
-#suey{
-    grid-area: suey;
-}
-#hongo{
-    grid-area: hongo;
-}
-#prehongo{
-    grid-area: prehongo;
-}
-#pollo{
-    grid-area: pollo;
-}
-#prepollo{
-    grid-area: prepollo;
-}
-#cerdo{
-    grid-area: cerdo;
-}
-#precerdo{
-    grid-area: precerdo;
-}
-#lango{
-    grid-area: lango;
-}
-#prelango{
-    grid-area: prelango;
-}
-#salm{
-    grid-area: salm;
-}
-#presalm{
-    grid-area: presalm;
-}
-#lomo{
-    grid-area: lomo;
-}
-#prelomo{
-    grid-area: prelomo;
+/*pagina entrada & Woks*/
+.body-menu {
+  width: 100%;
+  min-height: 100%;
+  background-image: url(../imagenes/fuego.png);
+  background-repeat: space;
+  background-size: 45px;
+  background-color: rgba(4, 191, 191, 0.8823529412);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.menu-main {
+  width: 100%;
+  padding: 1.5rem;
+}
 
-.wok-p > p{
-    font-size: 15px;
+.menu-carta {
+  margin-inline: 3px;
+  padding: 1rem;
+  width: 100%;
+  background-color: rgba(202, 244, 225, 0.8470588235);
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23070707' fill-opacity='0.11'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5%;
+}
+.menu-carta .menu-titulo {
+  display: flex;
+  justify-content: center;
+}
+.menu-carta .menu-titulo h2 {
+  font-size: 1.5em;
+}
+.menu-carta #entrada-p {
+  margin: 3px;
+  border: 2px dashed rgba(4, 191, 191, 0.8823529412);
+  border-radius: 5%;
+  padding: 5px;
+}
+.menu-carta .grafitti {
+  background-color: #D952AA;
+  border: 2px outset #401A39;
+  border-radius: 10%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-carta .precio {
+  width: 70px;
+  height: 40px;
+  background-color: #401A39;
+  color: whitesmoke;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*pagina sushi & Bowls*/
+#body_sushi {
+  background-image: url(../imagenes/palta.png);
+  background-repeat: space;
+  background-size: 45px;
+  background-color: #401A39;
+}
+#body_sushi .sushi_borde {
+  margin: 3px;
+  border: 2px dashed rgba(4, 191, 191, 0.8823529412);
+  border-radius: 5%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#body_sushi .cantidad {
+  font-size: 1.5em;
 }
 
 /*inicio footer*/
 .foot {
-    width: 100%;
-    background-color: #04bfbfe1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center ;
+  width: 100%;
+  background-color: rgba(4, 191, 191, 0.8823529412);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
 /*diseño redes*/
-.redes{
-    padding: 5px;
-    width: 300px;
-    text-align: center;
-    color: black;
+.redes {
+  padding: 5px;
+  width: 300px;
+  text-align: center;
+  color: black;
 }
-.redes li{
-    display: inline-block;
+
+.redes li {
+  display: inline-block;
 }
-.redes h3{
-    font-size: 14px;
+
+.redes h3 {
+  font-size: 14px;
 }
-.redes > ul li i{
-    font-size: 14px;
+
+.redes > ul li i {
+  font-size: 14px;
 }
+
 /*diseño zona*/
-.zona{
-    padding: 5px;
-    width: 400px;
-    text-align: center;
-    color: black;
+.zona {
+  padding: 5px;
+  width: 400px;
+  text-align: center;
+  color: black;
 }
-.zona h3{
-    font-size: 14px;
+
+.zona h3 {
+  font-size: 14px;
 }
-.zona p{
-    font-size: 14px;
+
+.zona p {
+  font-size: 14px;
 }
+
+/*inicio entrada*/
+.entrada_menu {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-areas: "... ...    ...    ..." "spring spring spring ..." "... ...    ...    ..." "... vegg   vegg   pvegg" "... cerd   cerd   pcerd" "... sal    sal    psal" "... ...    ...    ...";
+}
+.entrada_menu #spring {
+  grid-area: spring;
+}
+.entrada_menu #spring b {
+  font-size: 0.7em;
+  -webkit-text-decoration: underline wavy #D952AA;
+          text-decoration: underline wavy #D952AA;
+}
+.entrada_menu #spring span {
+  background-color: #F2AEBB;
+  border-radius: 50%;
+  color: #401A39;
+}
+.entrada_menu #vegg {
+  grid-area: vegg;
+}
+.entrada_menu #pvegg {
+  grid-area: pvegg;
+}
+.entrada_menu #cerd {
+  grid-area: cerd;
+}
+.entrada_menu #pcerd {
+  grid-area: pcerd;
+}
+.entrada_menu #sal {
+  grid-area: sal;
+}
+.entrada_menu #psal {
+  grid-area: psal;
+}
+
+.gyoza {
+  display: flex;
+  justify-content: space-between;
+}
+.gyoza b {
+  -webkit-text-decoration: underline wavy #D952AA;
+          text-decoration: underline wavy #D952AA;
+}
+.gyoza span {
+  background-color: #F2AEBB;
+  border-radius: 50%;
+  color: #401A39;
+}
+
+/*fin de entradas*/
+/*inicio wok*/
+.wok-p {
+  margin: 3px;
+  border: 2px dashed rgba(4, 191, 191, 0.8823529412);
+  border-radius: 5%;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr;
+  grid-template-rows: repeat(1, 0.1fr, 12, 0.5fr);
+  grid-template-areas: "... ...    ...    ...    ..." "... arroz  arroz  arroz  parroz" "... agrid  agrid  agrid  pagrid" "... ...    ...    ...    ..." "suey suey   suey   suey  suey" "... ...    ...    ...    ..." "... hongo  hongo  hongo    prehongo" "... pollo  pollo  pollo    prepollo" "... cerdo  cerdo  cerdo    precerdo" "... lango  lango  lango    prelango" "... salm   salm   salm    presalm" "... lomo   lomo   lomo    prelomo" "... ...    ...    pmein  pmein";
+  gap: 1em;
+}
+.wok-p #arroz {
+  grid-area: arroz;
+}
+.wok-p #darroz {
+  grid-area: darroz;
+}
+.wok-p #parroz {
+  grid-area: parroz;
+}
+.wok-p #agrid {
+  grid-area: agrid;
+}
+.wok-p #pagrid {
+  grid-area: pagrid;
+}
+.wok-p #pmein {
+  grid-area: pmein;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.wok-p #suey {
+  grid-area: suey;
+}
+.wok-p #hongo {
+  grid-area: hongo;
+}
+.wok-p #prehongo {
+  grid-area: prehongo;
+}
+.wok-p #pollo {
+  grid-area: pollo;
+}
+.wok-p #prepollo {
+  grid-area: prepollo;
+}
+.wok-p #cerdo {
+  grid-area: cerdo;
+}
+.wok-p #precerdo {
+  grid-area: precerdo;
+}
+.wok-p #lango {
+  grid-area: lango;
+}
+.wok-p #prelango {
+  grid-area: prelango;
+}
+.wok-p #salm {
+  grid-area: salm;
+}
+.wok-p #presalm {
+  grid-area: presalm;
+}
+.wok-p #lomo {
+  grid-area: lomo;
+}
+.wok-p #prelomo {
+  grid-area: prelomo;
+}
+.wok-p b {
+  font-size: 1.3em;
+}
+
+/*fin wok*/
+/*inicio bowls*/
+.bowl-menu {
+  margin: 3px;
+  border: 2px dashed rgba(4, 191, 191, 0.8823529412);
+  border-radius: 5%;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 0.1fr 2fr 0.6fr;
+  grid-template-rows: repeat(1, 0.1fr, 7, 0.6fr);
+  grid-template-areas: "... ...    ..." "... kani   pkani" "... lango  plango" "... salmn psalmon" "... temp   ptemp" "... veggie pveggie" "... ...   ing";
+  gap: 1em;
+}
+
+#kani {
+  grid-area: kani;
+}
+
+#pkani {
+  grid-area: pkani;
+}
+
+#lango {
+  grid-area: lango;
+}
+
+#plango {
+  grid-area: plango;
+}
+
+#salmon {
+  grid-area: salmn;
+}
+
+#psalmon {
+  grid-area: psalmon;
+}
+
+#temp {
+  grid-area: temp;
+}
+
+#ptemp {
+  grid-area: ptemp;
+}
+
+#veggie {
+  grid-area: veggie;
+}
+
+#pveggie {
+  grid-area: pveggie;
+}
+
+#ing {
+  grid-area: ing;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*fin bowls*/
+/*inicio sushi*/
+.sushi_menu {
+  display: grid;
+  grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr;
+  grid-template-rows: repeat(1, 0.2fr, 8, 1fr);
+  grid-template-areas: "... ...  ...  ... ..." "... deli deli ... ..." "...  p    p    p  ..." "... ...  ...  ... ..." "... x12  x24  x36 ..." "... p12  p24  p36 ..." "... x48  x72  ... ..." "... p48  p72  ... ..." "... p2  p2   p2  ...";
+}
+.sushi_menu #deli {
+  grid-area: deli;
+}
+.sushi_menu #p {
+  grid-area: p;
+}
+.sushi_menu #x12 {
+  grid-area: x12;
+}
+.sushi_menu #p12 {
+  grid-area: p12;
+}
+.sushi_menu #x24 {
+  grid-area: x24;
+}
+.sushi_menu #p24 {
+  grid-area: p24;
+}
+.sushi_menu #x36 {
+  grid-area: x36;
+}
+.sushi_menu #p36 {
+  grid-area: p36;
+}
+.sushi_menu #x48 {
+  grid-area: x48;
+}
+.sushi_menu #p48 {
+  grid-area: p48;
+}
+.sushi_menu #x72 {
+  grid-area: x72;
+}
+.sushi_menu #p72 {
+  grid-area: p72;
+}
+.sushi_menu #p2 {
+  grid-area: p2;
+}
+
+.only_salmon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.premium {
+  display: grid;
+  grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr;
+  grid-template-rows: repeat(1, 0.5fr, 5s, 1fr);
+  grid-template-areas: "...  ...   ...   ...  ..." "... prem  prem   prem prem" "... pprem pprem pprem pprem" "... ...   ...   ...   ..." "... x12p  x24p  x36p  ..." "... p12p  p24p  p36p  ...";
+}
+.premium #prem {
+  grid-area: prem;
+}
+.premium #pprem {
+  grid-area: pprem;
+}
+.premium #x12p {
+  grid-area: x12p;
+}
+.premium #x24p {
+  grid-area: x24p;
+}
+.premium #x36p {
+  grid-area: x36p;
+}
+.premium #p12p {
+  grid-area: p12p;
+}
+.premium #p24p {
+  grid-area: p24p;
+}
+.premium #p36p {
+  grid-area: p36p;
+}
+
+.combi_veggie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.degust {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.degust span {
+  background-color: #401A39;
+  color: whitesmoke;
+  border-radius: 50%;
+}/*# sourceMappingURL=estilo.css.map */

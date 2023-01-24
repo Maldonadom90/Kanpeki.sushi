@@ -1,0 +1,331 @@
+/*inicio entrada*/
+.entrada_menu{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "... ...    ...    ..."
+    "spring spring spring ..."
+    "... ...    ...    ..."
+    "... vegg   vegg   pvegg"
+    "... cerd   cerd   pcerd"
+    "... sal    sal    psal"
+    "... ...    ...    ...";
+
+    #spring{
+        grid-area: spring;
+
+        b{
+            font-size: 0.7em;
+            text-decoration: underline wavy $Color4;
+        }
+
+        span{
+            background-color: $Color5;
+            border-radius: 50%;
+            color: $Color3;
+        }
+    }
+    #vegg{
+        grid-area: vegg;
+    }
+    #pvegg{
+        grid-area: pvegg;
+    }
+    #cerd{
+        grid-area: cerd;
+    }
+    #pcerd{
+        grid-area: pcerd;
+    }
+    #sal{
+        grid-area: sal;
+    }
+    #psal{
+        grid-area: psal;
+    }
+}
+.gyoza{
+    display: flex;
+    justify-content: space-between;
+
+    b{
+        text-decoration: underline wavy $Color4;
+    }
+
+    span{
+        background-color: $Color5;
+        border-radius: 50%;
+        color: $Color3;
+    }
+}
+/*fin de entradas*/
+
+/*inicio wok*/
+.wok-p{
+    margin: 3px;
+    border: 2px dashed $Color1;
+    border-radius: 5%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr;
+    grid-template-rows: repeat(1, 0.1fr, 12, 0.5fr);
+    grid-template-areas: 
+    "... ...    ...    ...    ..."
+    "... arroz  arroz  arroz  parroz"
+    "... agrid  agrid  agrid  pagrid"
+    "... ...    ...    ...    ..."
+    "suey suey   suey   suey  suey"
+    "... ...    ...    ...    ..."
+    "... hongo  hongo  hongo    prehongo"
+    "... pollo  pollo  pollo    prepollo"
+    "... cerdo  cerdo  cerdo    precerdo"
+    "... lango  lango  lango    prelango"
+    "... salm   salm   salm    presalm"
+    "... lomo   lomo   lomo    prelomo"
+    "... ...    ...    pmein  pmein";
+    gap: 1em;
+    
+    #arroz{
+    grid-area: arroz;
+    }
+    #darroz{
+    grid-area: darroz;
+    }
+    #parroz{
+    grid-area: parroz;
+    }
+    #agrid{
+    grid-area: agrid;
+    }
+    #pagrid{
+    grid-area: pagrid;
+    }
+    #pmein{
+    grid-area: pmein;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    }
+    #suey{
+    grid-area: suey;
+    }
+    #hongo{
+    grid-area: hongo;
+    }
+    #prehongo{
+    grid-area: prehongo;
+    }
+    #pollo{
+    grid-area: pollo;
+    }
+    #prepollo{
+    grid-area: prepollo;
+    }
+    #cerdo{
+    grid-area: cerdo;
+    }
+    #precerdo{
+    grid-area: precerdo;
+    }
+    #lango{
+    grid-area: lango;
+    }
+    #prelango{
+    grid-area: prelango;
+    }
+    #salm{
+    grid-area: salm;
+    }
+#presalm{
+    grid-area: presalm;
+    }
+    #lomo{
+    grid-area: lomo;
+    }
+    #prelomo{
+    grid-area: prelomo;
+    }
+
+    b{
+        font-size: 1.3em;
+    }
+}
+/*fin wok*/
+
+/*inicio bowls*/
+.bowl-menu{
+    margin: 3px;
+    border: 2px dashed #04bfbfe1;
+    border-radius: 5%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 0.1fr 2fr 0.6fr;
+    grid-template-rows: repeat(1,0.1fr ,7, 0.6fr);
+    grid-template-areas: 
+    "... ...    ..."
+    "... kani   pkani"
+    "... lango  plango"
+    "... salmn psalmon"
+    "... temp   ptemp"
+    "... veggie pveggie"
+    "... ...   ing";
+    gap: 1em;
+}
+#kani{
+    grid-area: kani;
+}
+#pkani{
+    grid-area: pkani;
+}
+#lango{
+    grid-area: lango;
+}
+#plango{
+    grid-area: plango;
+}
+#salmon{
+    grid-area: salmn;
+}
+#psalmon{
+    grid-area: psalmon;
+}
+#temp{
+    grid-area: temp;
+}
+#ptemp{
+    grid-area: ptemp;
+}
+#veggie{
+    grid-area: veggie;
+}
+#pveggie{
+    grid-area: pveggie;
+}
+#ing{
+    grid-area: ing;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*fin bowls*/
+
+/*inicio sushi*/
+.sushi_menu{
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: repeat(1, 0.2fr, 8, 1fr);
+    grid-template-areas: 
+    "... ...  ...  ... ..."
+    "... deli deli ... ..."
+    "...  p    p    p  ..."
+    "... ...  ...  ... ..."
+    "... x12  x24  x36 ..."
+    "... p12  p24  p36 ..."
+    "... x48  x72  ... ..."
+    "... p48  p72  ... ..."
+    "... p2  p2   p2  ...";
+
+    #deli{
+        grid-area: deli;
+    }
+    #p{
+        grid-area: p;
+    }
+    #x12{
+        grid-area: x12;
+    }
+    #p12{
+        grid-area: p12;
+    }
+    #x24{
+        grid-area: x24;
+    }
+    #p24{
+        grid-area: p24;
+    }
+    #x36{
+        grid-area: x36;
+    }
+    #p36{
+        grid-area: p36;
+    }
+    #x48{
+        grid-area: x48;
+    }
+    #p48{
+        grid-area: p48;
+    }
+    #x72{
+        grid-area: x72;
+    }
+    #p72{
+        grid-area: p72;
+    }
+    #p2{
+        grid-area: p2;
+    }
+}
+.only_salmon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.premium{
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: repeat(1, 0.5fr, 5s, 1fr);
+    grid-template-areas: 
+    "...  ...   ...   ...  ..."
+    "... prem  prem   prem prem"
+    "... pprem pprem pprem pprem"
+    "... ...   ...   ...   ..."
+    "... x12p  x24p  x36p  ..."
+    "... p12p  p24p  p36p  ...";
+
+    #prem{
+        grid-area: prem;
+    }
+    #pprem{
+        grid-area: pprem;
+    }
+    #x12p{
+        grid-area: x12p;
+    }
+    #x24p{
+        grid-area: x24p;
+    }
+    #x36p{
+        grid-area: x36p;
+    }
+    #p12p{
+        grid-area: p12p;
+    }
+    #p24p{
+        grid-area: p24p;
+    }
+    #p36p{
+        grid-area: p36p;
+    }
+}
+.combi_veggie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.degust{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        background-color: $Color3;
+        color: whitesmoke;
+        border-radius: 50%;
+    }
+}

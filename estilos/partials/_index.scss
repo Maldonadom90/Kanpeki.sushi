@@ -1,0 +1,133 @@
+/*inicio estilo menú*/
+html{
+    height: 100%;
+}
+.inicio-body{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../imagenes/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logo img{
+    width: 200px;
+}
+#logo{
+    grid-area: logo;
+    background-color: #04bfbf23;
+    border-radius: 20%;
+}
+/*diseño de entradas*/
+#entrada{
+    grid-area: entrada;
+}
+#entrada a{
+    font-size: 20px;
+}
+/*diseño de woks*/
+#woks{
+    grid-area: woks;
+}
+#woks a{
+    font-size: 20px;
+}
+/*diseño de sushi*/
+#sushi{
+    grid-area: sushi;
+}
+#sushi a{
+    font-size: 20px;
+}
+/*diseño contacto*/
+#contacto{
+    grid-area: contacto;
+}
+#contacto a{
+    font-size: 18px;
+}
+/*diseño nav*/
+.nav{
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "... ...      ...      ..."
+    "... logo     logo     ..."
+    "... ...      ...      ..."
+    "... ...      ...      ..."
+    "... ...      ...      ..."
+    "... ...      ...      ..."
+    "... entrada  entrada  ..."
+    "... woks     woks     ..."
+    "... sushi    sushi    ..."
+    "... ...      ...      ..."
+    "... contacto contacto ...";
+    align-items: center;
+    gap: 2em;
+}
+.nav > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav >div a{
+    color: black;
+    text-decoration: none;
+}
+.boton {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .1px inset var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 10px;
+    color: var(--color);
+}
+.boton::after, .boton::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+.boton::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+.boton:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+.boton:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+.boton:hover {
+    color: var(--color2);
+    transform: scale(1.2);
+}
+.boton:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+/*fin estilo menú*/
