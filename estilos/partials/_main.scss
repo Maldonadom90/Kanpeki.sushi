@@ -35,20 +35,13 @@
             font-size: 1.5em;
         }
     }
-    #entrada-p{
-        margin: 3px;
-        border: 2px dashed $Color1;
-        border-radius: 5%;
-        padding: 5px;
-    }
     
     .grafitti{
         background-color: $Color4;
         border: 2px outset $Color3;
-        border-radius: 10%;
         color: white;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
 
@@ -73,10 +66,6 @@
     background-color: $Color3;
 
     .sushi_borde{
-        margin: 3px;
-        border: 2px dashed #04bfbfe1;
-        border-radius: 5%;
-        padding: 5px;
         display: flex;
         flex-direction: column;
         gap: 1rem;

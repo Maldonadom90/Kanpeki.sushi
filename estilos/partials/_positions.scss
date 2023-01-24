@@ -17,7 +17,6 @@
 
         b{
             font-size: 0.7em;
-            text-decoration: underline wavy $Color4;
         }
 
         span{
@@ -49,10 +48,6 @@
     display: flex;
     justify-content: space-between;
 
-    b{
-        text-decoration: underline wavy $Color4;
-    }
-
     span{
         background-color: $Color5;
         border-radius: 50%;
@@ -63,10 +58,6 @@
 
 /*inicio wok*/
 .wok-p{
-    margin: 3px;
-    border: 2px dashed $Color1;
-    border-radius: 5%;
-    padding: 5px;
     display: grid;
     grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr;
     grid-template-rows: repeat(1, 0.1fr, 12, 0.5fr);
@@ -156,21 +147,17 @@
 
 /*inicio bowls*/
 .bowl-menu{
-    margin: 3px;
-    border: 2px dashed #04bfbfe1;
-    border-radius: 5%;
-    padding: 5px;
     display: grid;
     grid-template-columns: 0.1fr 2fr 0.6fr;
     grid-template-rows: repeat(1,0.1fr ,7, 0.6fr);
     grid-template-areas: 
-    "... ...    ..."
-    "... kani   pkani"
-    "... lango  plango"
-    "... salmn psalmon"
-    "... temp   ptemp"
-    "... veggie pveggie"
-    "... ...   ing";
+    "...    ...    ..."
+    "kani   kani   pkani"
+    "lango  lango  plango"
+    "salmn  salmn  psalmon"
+    "temp   temp   ptemp"
+    "veggie veggie pveggie"
+    "...    ing    ing";
     gap: 1em;
 }
 #kani{
@@ -215,18 +202,19 @@
 /*inicio sushi*/
 .sushi_menu{
     display: grid;
-    grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr;
-    grid-template-rows: repeat(1, 0.2fr, 8, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
     grid-template-areas: 
-    "... ...  ...  ... ..."
-    "... deli deli ... ..."
-    "...  p    p    p  ..."
-    "... ...  ...  ... ..."
-    "... x12  x24  x36 ..."
-    "... p12  p24  p36 ..."
-    "... x48  x72  ... ..."
-    "... p48  p72  ... ..."
-    "... p2  p2   p2  ...";
+    "... ...  ...  ... ..."/*1*/
+    "... deli deli deli ..."/*2*/
+    "... p    p    p   ..."/*3*/
+    "... x12  x24  x36 ..."/*4*/
+    "... p12  p24  p36 ..."/*5*/
+    "... ...  x48  x72 ..."/*6*/
+    "... ...  p48  p72 ..."/*7*/
+    "... p2   p2   ... ..."/*8*/
+    "... ...  ...  ... ..."/*9*/;
+
 
     #deli{
         grid-area: deli;
@@ -267,24 +255,59 @@
     #p2{
         grid-area: p2;
     }
+    /*fin de combi 4variedades*/
 }
 .only_salmon{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.premium{
     display: grid;
-    grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr;
-    grid-template-rows: repeat(1, 0.5fr, 5s, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
     grid-template-areas: 
-    "...  ...   ...   ...  ..."
-    "... prem  prem   prem prem"
-    "... pprem pprem pprem pprem"
+    "... ...  ...   ...   ..."
+    "... only only  only  ..."
+    "... on12 on12  on12  ..."
+    "... ...  on12p on12p ..."
+    "... on24 on24  on24  ..."
+    "... ...  on24p on24p ..."
+    "... on36 on36  on36  ..."
+    "... ...  on36p on36p ..."
+    "... ...  ...   ...   ...";
+
+
+
+    #only{
+        grid-area: only;
+    }
+    #on12{
+        grid-area: on12;
+    }
+    #on12p{
+        grid-area: on12p;
+    }
+    #on24{
+        grid-area: on24;
+    }
+    #on24p{
+        grid-area: on24p;
+    }
+    #on36{
+        grid-area: on36;
+    }
+    #on36p{
+        grid-area: on36p;
+    }
+    /*fin Only Salmon*/
+}
+.combi_premium{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 0.5fr, 5, 1 fr);
+    grid-template-areas: 
     "... ...   ...   ...   ..."
-    "... x12p  x24p  x36p  ..."
-    "... p12p  p24p  p36p  ...";
+    "... prem  prem  prem  ..."
+    "... pprem pprem pprem ..."
+    "... p12   p24   p36   ..."
+    "... p12p  p24p  p36p  ..."
+    "... ...   ...   ...   ...";
 
     #prem{
         grid-area: prem;
@@ -292,40 +315,68 @@
     #pprem{
         grid-area: pprem;
     }
-    #x12p{
-        grid-area: x12p;
-    }
-    #x24p{
-        grid-area: x24p;
-    }
-    #x36p{
-        grid-area: x36p;
+    #p12{
+        grid-area: p12;
     }
     #p12p{
         grid-area: p12p;
     }
+    #p24{
+        grid-area: p24;
+    }
     #p24p{
         grid-area: p24p;
+    }
+    #p36{
+        grid-area: p36;
     }
     #p36p{
         grid-area: p36p;
     }
+    /*fin Combi Premiun*/
 }
 .combi_veggie{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 0.5fr, 5, 1fr);
+    grid-template-areas: 
+    "... ...  ...   ...  ..."
+    "... veg  veg   veg  ..."
+    "... vegp vegp  vegp ..."
+    "... ...  pvegp ...  ..."
+    "... ...  ...   ...  ...";
+
+
+    #veg{
+        grid-area: veg;
+    }
+    #vegp{
+        grid-area: vegp;
+    }
+    #pvegp{
+        grid-area: pvegp;
+    }
+    /*fin Combi Veggie*/
 }
 .degust{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 0.5fr, 4, 1fr);
+    grid-template-areas: 
+    "... ... ... ... ..."
+    "... d6  d6  d6  ..."
+    "... ... p6  p6  ..."
+    "... d6p d6p d6p ..."
+    "... ... ... ... ...";
 
-    span{
-        background-color: $Color3;
-        color: whitesmoke;
-        border-radius: 50%;
+    #d6{
+        grid-area: d6;
     }
+    #d6p{
+        grid-area: d6p;
+    }
+    #p6{
+        grid-area: p6;
+    }
+    /*fin Degustación*/
 }
