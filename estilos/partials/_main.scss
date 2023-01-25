@@ -61,8 +61,8 @@
 /*pagina sushi & Bowls*/
 #body_sushi{
     background-image: url(../imagenes/palta.png);
-    background-repeat: space;
-    background-size: 45px;
+    background-repeat: repeat-y;
+    background-size: contain;
     background-color: $Color3;
 
     .sushi_borde{
@@ -74,5 +74,34 @@
     .cantidad{
         font-size: 1.5em;
     }
+}
+/*pagina rolls*/
+#body_rolls{
+    background-image: url(../imagenes/sushi.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-color: $Color5;
+
+    b{
+        font-size: 1.2em;
+    }
+
+    .hot_roll{
+        background-color: orangered;
+        color: whitesmoke;
+    }
+
+    .salsa_wasabi{
+        background-color: $Color4;
+        border-radius: 10%;
+    }
+}
+/*fin paginas rolls*/
+/*inicio conocenos*/
+#menu_conocenos{
+    background-image: url(../imagenes/gatito.png);
+    background-repeat: space;
+    background-size: 100px;
+    background-color: $Color4;
 }
 

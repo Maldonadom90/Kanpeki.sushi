@@ -227,8 +227,8 @@ html {
 /*pagina sushi & Bowls*/
 #body_sushi {
   background-image: url(../imagenes/palta.png);
-  background-repeat: space;
-  background-size: 45px;
+  background-repeat: repeat-y;
+  background-size: contain;
   background-color: #401A39;
 }
 #body_sushi .sushi_borde {
@@ -238,6 +238,34 @@ html {
 }
 #body_sushi .cantidad {
   font-size: 1.5em;
+}
+
+/*pagina rolls*/
+#body_rolls {
+  background-image: url(../imagenes/sushi.png);
+  background-repeat: repeat;
+  background-size: contain;
+  background-color: #F2AEBB;
+}
+#body_rolls b {
+  font-size: 1.2em;
+}
+#body_rolls .hot_roll {
+  background-color: orangered;
+  color: whitesmoke;
+}
+#body_rolls .salsa_wasabi {
+  background-color: #D952AA;
+  border-radius: 10%;
+}
+
+/*fin paginas rolls*/
+/*inicio conocenos*/
+#menu_conocenos {
+  background-image: url(../imagenes/gatito.png);
+  background-repeat: space;
+  background-size: 100px;
+  background-color: #D952AA;
 }
 
 /*inicio footer*/
@@ -252,7 +280,7 @@ html {
 /*diseño redes*/
 .redes {
   padding: 5px;
-  width: 300px;
+  width: 200px;
   text-align: center;
   color: black;
 }
@@ -272,7 +300,7 @@ html {
 /*diseño zona*/
 .zona {
   padding: 5px;
-  width: 400px;
+  width: 500px;
   text-align: center;
   color: black;
 }
@@ -470,7 +498,7 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
-  grid-template-areas: "... ...  ...  ... ..." "... deli deli deli ..." "... p    p    p   ..." "... x12  x24  x36 ..." "... p12  p24  p36 ..." "... ...  x48  x72 ..." "... ...  p48  p72 ..." "... p2   p2   ... ..." "... ...  ...  ... ...";
+  grid-template-areas: "... ...  ...  ...   ..." "deli deli deli deli ..." "p    p    p    p    p" "... x12  x24  x36 ..." "... p12  p24  p36 ..." "... x48  ...  x72 ..." "... p48  ...  p72 ..." "... p2   p2   p2 ..." "... ...  ...  ... ...";
   /*fin de combi 4variedades*/
 }
 .sushi_menu #deli {
@@ -517,7 +545,7 @@ html {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
-  grid-template-areas: "... ...  ...   ...   ..." "... only only  only  ..." "... on12 on12  on12  ..." "... ...  on12p on12p ..." "... on24 on24  on24  ..." "... ...  on24p on24p ..." "... on36 on36  on36  ..." "... ...  on36p on36p ..." "... ...  ...   ...   ...";
+  grid-template-areas: "... ...  ...   ...   ..." "only only only  only only" "... on12 on12  on12  on12" "... ...  on12p on12p ..." "... on24 on24  on24  on24" "... ...  on24p on24p ..." "... on36 on36  on36  on36" "... ...  on36p on36p ..." "... ...  ...   ...   ...";
   /*fin Only Salmon*/
 }
 .only_salmon #only {
@@ -546,7 +574,7 @@ html {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 0.5fr, 5, 1 fr);
-  grid-template-areas: "... ...   ...   ...   ..." "... prem  prem  prem  ..." "... pprem pprem pprem ..." "... p12   p24   p36   ..." "... p12p  p24p  p36p  ..." "... ...   ...   ...   ...";
+  grid-template-areas: "... ...   ...   ...   ..." "prem prem  prem  prem  prem" "pprem pprem pprem pprem ..." "... p12   p24   p36   ..." "... p12p  p24p  p36p  ..." "... ...   ...   ...   ...";
   /*fin Combi Premiun*/
 }
 .combi_premium #prem {
@@ -578,7 +606,7 @@ html {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 0.5fr, 5, 1fr);
-  grid-template-areas: "... ...  ...   ...  ..." "... veg  veg   veg  ..." "... vegp vegp  vegp ..." "... ...  pvegp ...  ..." "... ...  ...   ...  ...";
+  grid-template-areas: "... ...  ...   ...  ..." "veg veg  veg   veg  ..." "vegp vegp vegp  vegp vegp" "... ...  pvegp ...  ..." "... ...  ...   ...  ...";
   /*fin Combi Veggie*/
 }
 .combi_veggie #veg {
@@ -595,7 +623,7 @@ html {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 0.5fr, 4, 1fr);
-  grid-template-areas: "... ... ... ... ..." "... d6  d6  d6  ..." "... ... p6  p6  ..." "... d6p d6p d6p ..." "... ... ... ... ...";
+  grid-template-areas: "... ... ... ... ..." "d6 d6  d6  d6  ..." "... ... p6  p6  ..." "... d6p d6p d6p ..." "... ... ... ... ...";
   /*fin Degustación*/
 }
 .degust #d6 {
@@ -606,4 +634,26 @@ html {
 }
 .degust #p6 {
   grid-area: p6;
+}
+
+/*fin pagina sushi*/
+/*inicio pagina roles*/
+#menu_rolls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu_cinco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*fin pagina rolls*/
+/*inicio pagina conocenos*/
+#conocenos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=estilo.css.map */
