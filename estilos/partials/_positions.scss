@@ -1,4 +1,30 @@
 /*inicio entrada*/
+.boton_flotante{
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+
+    img{
+        width: 50px;
+    }
+    
+}
+#boton_sushi{
+    img{
+        width: 130px;
+    }
+}
+#boton_conocenos{
+    img{
+        width: 100px;
+    }
+}
+
+.boton_flotante:hover{
+    transform: scale(1.5);
+    transform: translateY(-100px);
+}
+
 .entrada_menu{
     display: grid;
     grid-template-columns: 0.2fr 1fr 1fr 1fr;
