@@ -2,9 +2,6 @@
 .body-menu{
     width: 100%;
     min-height: 100%;
-    background-image: url(../imagenes/fuego.png);
-    background-repeat: space;
-    background-size: 45px;
     background-color: $Color1;
     display: flex;
     flex-direction: column;
@@ -60,9 +57,6 @@
 
 /*pagina sushi & Bowls*/
 #body_sushi{
-    background-image: url(../imagenes/palta.png);
-    background-repeat: repeat-y;
-    background-size: contain;
     background-color: $Color3;
 
     .sushi_borde{
@@ -77,9 +71,6 @@
 }
 /*pagina rolls*/
 #body_rolls{
-    background-image: url(../imagenes/sushi.png);
-    background-repeat: repeat;
-    background-size: contain;
     background-color: $Color5;
 
     b{
@@ -99,9 +90,6 @@
 /*fin paginas rolls*/
 /*inicio conocenos*/
 #menu_conocenos{
-    background-image: url(../imagenes/gatito.png);
-    background-repeat: space;
-    background-size: 100px;
     background-color: $Color4;
 }
 

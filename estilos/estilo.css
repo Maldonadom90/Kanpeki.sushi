@@ -172,9 +172,6 @@ html {
 .body-menu {
   width: 100%;
   min-height: 100%;
-  background-image: url(../imagenes/fuego.png);
-  background-repeat: space;
-  background-size: 45px;
   background-color: rgba(4, 191, 191, 0.8823529412);
   display: flex;
   flex-direction: column;
@@ -226,9 +223,6 @@ html {
 
 /*pagina sushi & Bowls*/
 #body_sushi {
-  background-image: url(../imagenes/palta.png);
-  background-repeat: repeat-y;
-  background-size: contain;
   background-color: #401A39;
 }
 #body_sushi .sushi_borde {
@@ -242,9 +236,6 @@ html {
 
 /*pagina rolls*/
 #body_rolls {
-  background-image: url(../imagenes/sushi.png);
-  background-repeat: repeat;
-  background-size: contain;
   background-color: #F2AEBB;
 }
 #body_rolls b {
@@ -262,9 +253,6 @@ html {
 /*fin paginas rolls*/
 /*inicio conocenos*/
 #menu_conocenos {
-  background-image: url(../imagenes/gatito.png);
-  background-repeat: space;
-  background-size: 100px;
   background-color: #D952AA;
 }
 
@@ -545,7 +533,7 @@ html {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
-  grid-template-areas: "... ...  ...   ...   ..." "only only only  only only" "... on12 on12  on12  on12" "... ...  on12p on12p ..." "... on24 on24  on24  on24" "... ...  on24p on24p ..." "... on36 on36  on36  on36" "... ...  on36p on36p ..." "... ...  ...   ...   ...";
+  grid-template-areas: "... ...  ...   ...   ..." "only only only  only only" "on12 on12 on12  on12  on12" "... ...  on12p on12p ..." "on24 on24 on24  on24  on24" "... ...  on24p on24p ..." "on36 on36 on36  on36  on36" "... ...  on36p on36p ..." "... ...  ...   ...   ...";
   /*fin Only Salmon*/
 }
 .only_salmon #only {
