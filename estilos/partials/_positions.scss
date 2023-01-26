@@ -22,7 +22,7 @@
 
 .boton_flotante:hover{
     transform: scale(1.5);
-    transform: translateY(-100px);
+    transform: translateY(-7px);
 }
 
 .entrada_menu{
@@ -418,4 +418,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/*media querries*/
+@media (max-width: 480px) {
+    
+    .menu_main{
+        width: 110%;
+        padding: 0.5rem;
+    }
+    
+
 }
