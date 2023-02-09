@@ -5,6 +5,7 @@ html{
 .inicio-body{
     width: 100%;
     min-height: 100%;
+    background-color: $Color1;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -20,7 +21,7 @@ html{
 }
 #logo{
     grid-area: logo;
-    background-color: #04bfbf23;
+    background-color: #04bfbfa2;
     border-radius: 20%;
 }
 /*diseño de entradas*/
@@ -54,22 +55,18 @@ html{
 /*diseño nav*/
 .nav{
     width: 100%;
-    height: 80vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: repeat(8, 0.4fr);
     grid-template-areas: 
     "... ...      ...      ..."
     "... logo     logo     ..."
     "... ...      ...      ..."
-    "... ...      ...      ..."
-    "... ...      ...      ..."
-    "... ...      ...      ..."
     "... entrada  entrada  ..."
     "... woks     woks     ..."
     "... sushi    sushi    ..."
-    "... ...      ...      ..."
-    "... contacto contacto ...";
+    "... contacto contacto ..."
+    "... ...      ...      ...";
     align-items: center;
     gap: 2em;
 }
@@ -86,7 +83,7 @@ html{
     --color: #00A97F;
     --color2: rgb(10, 25, 30);
     padding: 0.8em 1.75em;
-    background-color: transparent;
+    background-color: #00a97f6c;
     border-radius: 6px;
     border: .1px inset var(--color);
     transition: .5s;

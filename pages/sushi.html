@@ -8,6 +8,8 @@
     <meta name="keywords" content="sushi, combinados, only salmon, premium, roles, veggie, sushi veggie">
     <meta name="author" content="Mauricio Maldonado">
     <meta name="copyright" content="kanpeki.sushi">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../estilos/estilo.css">
     <title>Sushi & Bowls</title>
+    <link rel="icon" type="image/x-icon" href="../imagenes/favicon.png">
 </head>
 <body class="body-menu" id="body_sushi">
     <header>
@@ -44,34 +47,37 @@
 <!--fin barra nav-->
     <a href="#inicio_sushi" class="boton_flotante"><img src="../imagenes/palta.png" alt="palta"></a>
     </header>
-    <main class="menu-main">
-        <div class="menu-carta">
-            <div class="menu-titulo">
-            <h2>Sushi Bowls</h2>
-        </div>
-            <div class="bowl-menu">
-            <div id="kani"> <b>Kanikama,</b> arroz de sushi, palta, verdeo, sésamo y phila.</div>
-            <div id="pkani" class="precio">$1550</div>
-            <div id="lango"> <b>Langostinos,</b> arroz de sushi, palta, verdeo, sésamo y phila.</div>
-            <div id="plango" class="precio">$1550</div>
-            <div id="salmon"> <b>Salmón fresco o apanado,</b> arroz de sushi, palta, verdeo, sésamo y phila.</div>
-            <div id="psalmon" class="precio">$1650</div>
-            <div id="temp"> <b>Tempura Bowl,</b> pescado blanco frito en tempura, criolla condimentada con cilantro y arroz blanco.</div>
-            <div id="ptemp" class="precio">$1550</div>
-            <div id="veggie"> <b>Sushi Bowl Veggie</b> </div>
-            <div id="pveggie" class="precio">$1400</div>
-            <div id="ing"> <b>🥑Ingrediente Adicional:</b><span class="precio">$250</span></div>
-        </div>
-        </div>
-        
-    </main>
+    <main class="main_forma">
+        <section class="menu-main">
+            <div class="menu-carta">
+                <div class="menu-titulo">
+                <h2 class="animate__animated animate__flip">Sushi Bowls</h2>
+                </div>
+                <div class="bowl-menu">
+                    <div id="kani"> <b>Kanikama,</b> arroz de sushi, palta, verdeo, sésamo y phila.</div>
+                    <div id="pkani" class="precio">$1550</div>
+                    <div id="lango"> <b>Langostinos,</b> arroz de sushi, palta, verdeo, sésamo y phila.</div>
+                    <div id="plango" class="precio">$1550</div>
+                    <div id="salmon"> <b>Salmón fresco o apanado,</b> arroz de sushi, palta, verdeo, sésamo y phila.</div>
+                    <div id="psalmon" class="precio">$1650</div>
+                    <div id="temp"> <b>Tempura Bowl,</b> pescado blanco frito en tempura, criolla condimentada con cilantro y arroz blanco.</div>
+                    <div id="ptemp" class="precio">$1550</div>
+                    <div id="veggie"> <b>Sushi Bowl Veggie</b> </div>
+                    <div id="pveggie" class="precio">$1400</div>
+                    <div id="ing"> <b>🥑Ingrediente Adicional:</b><span class="precio">$250</span></div>
+                </div>
+                <div class="sushi_imagen" >
+                    <img src="/imagenes/fondo sushi.jpg" alt="sushi" class="animate__animated animate__zoomInDown" >
+                </div>
+            </div>
+        </section>
 
     <section class="menu-main">
-        <div class="menu-carta">
+        <div class="menu-carta" >
             <div class="menu-titulo"> 
-                <div><h2>Sushi</h2></div>
+                <div><h2 class="animate__animated animate__flip">Sushi</h2></div>
             </div>
-            <div class="sushi_borde">
+            <div class="sushi_borde" id="sushi_espacio">
                 <div class="sushi_menu"><!--Combi 4variedades-->
                     <h3 id="deli"> <b>Delicombi</b> </h3>
                     <p id="p"><b>4 variedades</b>(Salmón, kanikama, langostinos y salmón cocido).</p>
@@ -115,27 +121,28 @@
                     <div id="pvegp" class="precio">$1900</div>
                 </div>
                 <div class="degust"><!--Combi Degustación-->
-                    <div id="d6"><h3><pre><b>Degustación</b> <b>x6</b></pre></h3>
+                    <div id="d6"><h3><pre><b>Degustación</b> <b>x6</b></pre></h3></div>
                     <div id="p6" class="precio">$1600</div>
                     <div id="d6p"><b>🥑Piezas a elección de la Sushiwoman</b> </div>
                 </div>    
             </div>
         </div>
     </section>
+    </main>
+    
     <!--fin de main-->
     <!--inicio de footer-->
-    <footer class="foot" id="foot-wok">
+    <footer class="foot">
         <div class="redes">
-            <h3 >Redes Sociales</h3>
-            <ul>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-solid fa-mobile-retro"></i></li>
-                <li><i class="fa-brands fa-facebook"></i></li>
+            <h3>Comunicate con nosotros!!</h3>
+            <ul class="iconos-redes">
+                <li class="instagram"> <a href="https://www.instagram.com/kanpeki.sushi/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><i class="fa-solid fa-mobile-retro"></i> <pre> 4105741/433720</pre> </li>
+                <li class="instagram"> <a href="https://m.me/Kanpeki.Sushi.AsianFood" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
             </ul>
         </div>    
-        <div class="zona">
-            <h3>Velez Sarfield 792</h3>
-            <p>Río Tercero,Córdoba,Argentina</p>
+        <div id="logo_foot"> 
+                <img src="../imagenes/KPK LOGO 2022-34.png" alt="logo">
         </div>
     </footer>
 

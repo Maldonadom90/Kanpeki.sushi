@@ -1,37 +1,55 @@
 /*inicio footer*/
 .foot {
     width: 100%;
-    background-color: #04bfbfe1;
+    padding: 20px;
+    background-color: #04bfbff6;
     display: flex;
     flex-direction: row;
-    justify-content: center ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 /*diseño redes*/
 .redes{
     padding: 5px;
-    width: 200px;
+    width: 50%;
     text-align: center;
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .iconos-redes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        gap: 1rem;
+        }
+
+        .instagram{
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: 45px;
+            }
+        }
+
+
+    ul>li>i{
+        font-size: 30px;
+        }
+
+
 }
-.redes li{
-    display: inline-block;
-}
-.redes h3{
-    font-size: 14px;
-}
-.redes > ul li i{
-    font-size: 14px;
-}
+
 /*diseño zona*/
-.zona{
-    padding: 5px;
-    width: 500px;
-    text-align: center;
-    color: black;
-}
-.zona h3{
-    font-size: 14px;
-}
-.zona p{
-    font-size: 14px;
+#logo_foot{
+    img{
+        width: 150px;
+    }
+    
 }

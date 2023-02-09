@@ -10,6 +10,8 @@
     
 }
 #boton_sushi{
+    right: -5px;
+    
     img{
         width: 130px;
     }
@@ -24,19 +26,26 @@
     transform: scale(1.5);
     transform: translateY(-7px);
 }
+/*fin boton flotante*/
+/*inicio menu*/
+.main_forma{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .entrada_menu{
     display: grid;
-    grid-template-columns: 0.2fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: 0.2fr 1fr 1fr 0.4fr;
+    grid-template-rows: 0.2fr 0.2fr 0.8fr 0.8fr 0.8fr 0.2fr;
     grid-template-areas: 
-    "... ...    ...    ..."
+    "...    ...    ...    ..."
     "spring spring spring ..."
-    "... ...    ...    ..."
-    "... vegg   vegg   pvegg"
-    "... cerd   cerd   pcerd"
-    "... sal    sal    psal"
-    "... ...    ...    ...";
+    "vegg   vegg   vegg   pvegg"
+    "cerd   cerd   cerd   pcerd"
+    "sal    sal    sal    psal"
+    "...    ...    ...    ...";
 
     #spring{
         grid-area: spring;
@@ -46,9 +55,16 @@
         }
 
         span{
-            background-color: $Color5;
-            border-radius: 50%;
-            color: $Color3;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 0.1em 0.5em 0.1em 0.5em;
+            color: white;
+            background: linear-gradient(0deg, $Color3 0%, rgb(233, 122, 227) 100%);
+            border: none;
+            box-shadow: 0 0.7em 1.5em -0.5em #08080898;
+            letter-spacing: 0.05em;
+            border-radius: 20em;
         }
     }
     #vegg{
@@ -73,11 +89,24 @@
 .gyoza{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    pre{
+        font-size: 1em;
+    }
 
     span{
-        background-color: $Color5;
-        border-radius: 50%;
-        color: $Color3;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0.1em 0.5em 0.1em 0.5em;
+        color: white;
+        background: #ad5389;
+        background: linear-gradient(0deg, $Color3 0%, rgb(233, 122, 227) 100%);
+        border: none;
+        box-shadow: 0 0.7em 1.5em -0.5em #08080898;
+        letter-spacing: 0.05em;
+        border-radius: 20em;
     }
 }
 /*fin de entradas*/
@@ -85,8 +114,9 @@
 /*inicio wok*/
 .wok-p{
     display: grid;
+    align-items: center;
     grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr;
-    grid-template-rows: repeat(1, 0.1fr, 12, 0.5fr);
+    grid-template-rows: repeat(1, 0.1fr, 12, 0.3fr);
     grid-template-areas: 
     "... ...    ...    ...    ..."
     "... arroz  arroz  arroz  parroz"
@@ -104,69 +134,69 @@
     gap: 1em;
     
     #arroz{
-    grid-area: arroz;
+        grid-area: arroz;
     }
     #darroz{
-    grid-area: darroz;
+        grid-area: darroz;
     }
     #parroz{
-    grid-area: parroz;
+        grid-area: parroz;
     }
     #agrid{
-    grid-area: agrid;
+        grid-area: agrid;
     }
     #pagrid{
-    grid-area: pagrid;
+        grid-area: pagrid;
     }
     #pmein{
-    grid-area: pmein;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+        grid-area: pmein;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
     #suey{
-    grid-area: suey;
+        grid-area: suey;
     }
     #hongo{
-    grid-area: hongo;
+        grid-area: hongo;
     }
     #prehongo{
-    grid-area: prehongo;
+        grid-area: prehongo;
     }
     #pollo{
-    grid-area: pollo;
+        grid-area: pollo;
     }
     #prepollo{
-    grid-area: prepollo;
+        grid-area: prepollo;
     }
     #cerdo{
-    grid-area: cerdo;
+        grid-area: cerdo;
     }
     #precerdo{
-    grid-area: precerdo;
+        grid-area: precerdo;
     }
     #lango{
-    grid-area: lango;
+        grid-area: lango;
     }
     #prelango{
-    grid-area: prelango;
+        grid-area: prelango;
     }
     #salm{
-    grid-area: salm;
+        grid-area: salm;
     }
-#presalm{
-    grid-area: presalm;
+    #presalm{
+        grid-area: presalm;
     }
     #lomo{
-    grid-area: lomo;
+        grid-area: lomo;
     }
     #prelomo{
-    grid-area: prelomo;
+        grid-area: prelomo;
     }
 
     b{
-        font-size: 1.3em;
+        font-size: 1em;
     }
 }
 /*fin wok*/
@@ -223,21 +253,26 @@
     align-items: center;
 }
 /*fin bowls*/
+
 /*inicio sushi*/
+#sushi_espacio{
+    display: flex;
+    justify-content: space-around;
+}
 .sushi_menu{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
+    grid-template-columns: 0.2fr 0.5fr 1fr 0.5fr 1fr;
+    grid-template-rows: repeat(1, 0.5fr, 7, 1fr);
     grid-template-areas: 
     "... ...  ...  ...   ..."/*1*/
     "deli deli deli deli ..."/*2*/
     "p    p    p    p    p"/*3*/
-    "... x12  x24  x36 ..."/*4*/
-    "... p12  p24  p36 ..."/*5*/
-    "... x48  ...  x72 ..."/*6*/
-    "... p48  ...  p72 ..."/*7*/
-    "... p2   p2   p2 ..."/*8*/
-    "... ...  ...  ... ..."/*9*/;
+    "... x12 p12  x24  p24"/*4*/
+    "... x36 p36  x48  p48"/*5*/
+    "... x72 p72  p2   p2"/*6*/
+    "... ... ...  p2   p2"/*7*/
+    "... ...  ...  ... ..."/*8*/;
+
 
     #deli{
         grid-area: deli;
@@ -282,18 +317,20 @@
 }
 .only_salmon{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: repeat(1, 0.5fr, 7, 1fr);
     grid-template-areas: 
-    "... ...  ...   ...   ..."
-    "only only only  only only"
-    "on12 on12 on12  on12  on12"
-    "... ...  on12p on12p ..."
-    "on24 on24 on24  on24  on24"
-    "... ...  on24p on24p ..."
-    "on36 on36 on36  on36  on36"
-    "... ...  on36p on36p ..."
-    "... ...  ...   ...   ...";
+    "... ... ...  ...   ...   ..."
+    "only only only  only only ..."
+    "... on12 on12 on12  on12 on12p"
+    "... ... ...   ...   ...  ..."
+    "... on24 on24 on24  on24 on24p"
+    "... ... ...   ...   ...  ..."
+    "... on36 on36 on36  on36 on36p"
+    "... ... ...  ...   ...   ...";
+
 
     #only{
         grid-area: only;
@@ -320,15 +357,14 @@
 }
 .combi_premium{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 0.5fr, 5, 1 fr);
+    grid-template-columns: 0.2fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+    grid-template-rows: repeat(1, 0.5fr, 4, 1 fr);
     grid-template-areas: 
-    "... ...   ...   ...   ..."
-    "prem prem  prem  prem  prem"
-    "pprem pprem pprem pprem ..."
-    "... p12   p24   p36   ..."
-    "... p12p  p24p  p36p  ..."
-    "... ...   ...   ...   ...";
+    "...  ...   ...   ...   ...   ... ..."
+    "prem prem  prem  prem  prem  ... ..."
+    "...  pprem pprem pprem pprem ... ..."
+    "...  p12   p12p  p24   p24p  p36 p36p"
+    "...  ...   ...   ...   ...   ... ...";
 
     #prem{
         grid-area: prem;
@@ -358,13 +394,15 @@
 }
 .combi_veggie{
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(1, 0.5fr, 5, 1fr);
     grid-template-areas: 
     "... ...  ...   ...  ..."
     "veg veg  veg   veg  ..."
-    "vegp vegp vegp  vegp vegp"
-    "... ...  pvegp ...  ..."
+    "vegp vegp vegp vegp ..."
+    "vegp vegp vegp vegp pvegp"
     "... ...  ...   ...  ...";
 
     #veg{
@@ -372,6 +410,7 @@
     }
     #vegp{
         grid-area: vegp;
+        font-size: 0.9em;
     }
     #pvegp{
         grid-area: pvegp;
@@ -380,13 +419,12 @@
 }
 .degust{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 0.5fr, 4, 1fr);
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: repeat(1, 2fr, 3, 1fr);
     grid-template-areas: 
     "... ... ... ... ..."
-    "d6 d6  d6  d6  ..."
-    "... ... p6  p6  ..."
-    "... d6p d6p d6p ..."
+    "d6  d6  d6  d6  p6"
+    "d6p d6p d6p d6p d6p"
     "... ... ... ... ...";
 
     #d6{
@@ -401,11 +439,12 @@
 /*fin Degustación*/
 }
 /*fin pagina sushi*/
+
 /*inicio pagina roles*/
 #menu_rolls{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 #menu_cinco{
     display: flex;
@@ -418,14 +457,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-/*media querries*/
-@media (max-width: 480px) {
-    
-    .menu_main{
-        width: 110%;
-        padding: 0.5rem;
-    }
-    
+
 
 }

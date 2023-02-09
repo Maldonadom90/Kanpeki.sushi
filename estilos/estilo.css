@@ -23,6 +23,7 @@ html {
 .inicio-body {
   width: 100%;
   min-height: 100%;
+  background-color: rgba(4, 191, 191, 0.8823529412);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -39,7 +40,7 @@ html {
 
 #logo {
   grid-area: logo;
-  background-color: rgba(4, 191, 191, 0.137254902);
+  background-color: rgba(4, 191, 191, 0.6352941176);
   border-radius: 20%;
 }
 
@@ -82,11 +83,10 @@ html {
 /*diseño nav*/
 .nav {
   width: 100%;
-  height: 80vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "... ...      ...      ..." "... logo     logo     ..." "... ...      ...      ..." "... ...      ...      ..." "... ...      ...      ..." "... ...      ...      ..." "... entrada  entrada  ..." "... woks     woks     ..." "... sushi    sushi    ..." "... ...      ...      ..." "... contacto contacto ...";
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  grid-template-rows: repeat(8, 0.4fr);
+  grid-template-areas: "... ...      ...      ..." "... logo     logo     ..." "... ...      ...      ..." "... entrada  entrada  ..." "... woks     woks     ..." "... sushi    sushi    ..." "... contacto contacto ..." "... ...      ...      ...";
   align-items: center;
   gap: 2em;
 }
@@ -106,7 +106,7 @@ html {
   --color: #00A97F;
   --color2: rgb(10, 25, 30);
   padding: 0.8em 1.75em;
-  background-color: transparent;
+  background-color: rgba(0, 169, 127, 0.4235294118);
   border-radius: 6px;
   border: 0.1px inset var(--color);
   transition: 0.5s;
@@ -178,44 +178,58 @@ html {
   justify-content: space-between;
 }
 
+#body_wok {
+  background-image: url(/imagenes/fondo5.png);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: 0% 300%;
+}
+
 .menu-main {
-  width: 100%;
+  width: 500px;
   padding: 1.5rem;
 }
 
 .menu-carta {
-  margin-inline: 3px;
   padding: 1rem;
   width: 100%;
-  background-color: rgba(202, 244, 225, 0.8470588235);
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23070707' fill-opacity='0.11'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 5%;
 }
 .menu-carta .menu-titulo {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .menu-carta .menu-titulo h2 {
-  font-size: 1.5em;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+  font-size: 35px;
+  background: #202020;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
 }
 .menu-carta .grafitti {
-  background-color: #D952AA;
-  border: 2px outset #401A39;
+  background-color: rgba(4, 191, 191, 0.8823529412);
   color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-radius: 50px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 .menu-carta .precio {
   width: 70px;
-  height: 40px;
+  height: 35px;
   background-color: #401A39;
   color: whitesmoke;
-  border-radius: 50%;
+  border-radius: 79px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,7 +237,7 @@ html {
 
 /*pagina sushi & Bowls*/
 #body_sushi {
-  background-color: #401A39;
+  background-color: #91f872;
 }
 #body_sushi .sushi_borde {
   display: flex;
@@ -234,20 +248,72 @@ html {
   font-size: 1.5em;
 }
 
+.sushi_imagen {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: rgba(4, 191, 191, 0.8823529412);
+  border-radius: 0.8em;
+}
+.sushi_imagen img {
+  width: 100%;
+  border-radius: 0.8em;
+}
+
 /*pagina rolls*/
 #body_rolls {
   background-color: #F2AEBB;
+  background-image: url(/imagenes/logo\ fondo.png);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 95% 1150%;
 }
-#body_rolls b {
-  font-size: 1.2em;
+#body_rolls h2 pre {
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+  font-size: 35px;
+  background: #202020;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
 }
 #body_rolls .hot_roll {
+  margin: 5px;
   background-color: orangered;
   color: whitesmoke;
+  padding: 5px;
+  border-radius: 0.8em;
 }
 #body_rolls .salsa_wasabi {
-  background-color: #D952AA;
-  border-radius: 10%;
+  background-color: #F2AEBB;
+  border-radius: 0.8em;
+  padding-top: 10px;
+  margin: 3px;
+}
+#body_rolls .precio2 pre {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #401A39;
+  color: whitesmoke;
+  border-radius: 79px;
+  padding: 3px;
+}
+
+.imagen_rol {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 0.8em;
+}
+.imagen_rol img {
+  width: 450px;
+  border-radius: 0.8em;
 }
 
 /*fin paginas rolls*/
@@ -255,50 +321,124 @@ html {
 #menu_conocenos {
   background-color: #D952AA;
 }
+#menu_conocenos .fb-page {
+  margin-top: 20px;
+}
+#menu_conocenos #mapa {
+  margin-top: 25px;
+}
+
+/*cuadrado instagram*/
+.card {
+  --bg: #0a0a0acb;
+  --hover-bg: #FFE5F4;
+  --hover-text: #E50087;
+  color: whitesmoke;
+  max-width: 500px;
+  text-align: center;
+  background: var(--bg);
+  margin: 10px;
+  padding: 1.5em;
+  padding-block: 1.8em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.card__body {
+  color: #D952AA;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.card > :not(span) {
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card > strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -0.035em;
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card:hover span {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: var(--hover-bg);
+}
+
+.card:hover > div, .card:hover > strong {
+  opacity: 0;
+}
 
 /*inicio footer*/
 .foot {
   width: 100%;
-  background-color: rgba(4, 191, 191, 0.8823529412);
+  padding: 20px;
+  background-color: rgba(4, 191, 191, 0.9647058824);
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*diseño redes*/
 .redes {
   padding: 5px;
-  width: 200px;
+  width: 50%;
   text-align: center;
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.redes li {
-  display: inline-block;
+.redes .iconos-redes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  gap: 1rem;
 }
-
-.redes h3 {
-  font-size: 14px;
+.redes .instagram a {
+  text-decoration: none;
+  color: black;
+  font-size: 45px;
 }
-
-.redes > ul li i {
-  font-size: 14px;
+.redes ul > li > i {
+  font-size: 30px;
 }
 
 /*diseño zona*/
-.zona {
-  padding: 5px;
-  width: 500px;
-  text-align: center;
-  color: black;
-}
-
-.zona h3 {
-  font-size: 14px;
-}
-
-.zona p {
-  font-size: 14px;
+#logo_foot img {
+  width: 150px;
 }
 
 /*inicio entrada*/
@@ -311,6 +451,9 @@ html {
   width: 50px;
 }
 
+#boton_sushi {
+  right: -5px;
+}
 #boton_sushi img {
   width: 130px;
 }
@@ -324,11 +467,20 @@ html {
   transform: translateY(-7px);
 }
 
+/*fin boton flotante*/
+/*inicio menu*/
+.main_forma {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .entrada_menu {
   display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr;
-  grid-template-areas: "... ...    ...    ..." "spring spring spring ..." "... ...    ...    ..." "... vegg   vegg   pvegg" "... cerd   cerd   pcerd" "... sal    sal    psal" "... ...    ...    ...";
+  grid-template-columns: 0.2fr 1fr 1fr 0.4fr;
+  grid-template-rows: 0.2fr 0.2fr 0.8fr 0.8fr 0.8fr 0.2fr;
+  grid-template-areas: "...    ...    ...    ..." "spring spring spring ..." "vegg   vegg   vegg   pvegg" "cerd   cerd   cerd   pcerd" "sal    sal    sal    psal" "...    ...    ...    ...";
 }
 .entrada_menu #spring {
   grid-area: spring;
@@ -337,9 +489,16 @@ html {
   font-size: 0.7em;
 }
 .entrada_menu #spring span {
-  background-color: #F2AEBB;
-  border-radius: 50%;
-  color: #401A39;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+  color: white;
+  background: linear-gradient(0deg, #401A39 0%, rgb(233, 122, 227) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em rgba(8, 8, 8, 0.5960784314);
+  letter-spacing: 0.05em;
+  border-radius: 20em;
 }
 .entrada_menu #vegg {
   grid-area: vegg;
@@ -363,19 +522,32 @@ html {
 .gyoza {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.gyoza pre {
+  font-size: 1em;
 }
 .gyoza span {
-  background-color: #F2AEBB;
-  border-radius: 50%;
-  color: #401A39;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, #401A39 0%, rgb(233, 122, 227) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em rgba(8, 8, 8, 0.5960784314);
+  letter-spacing: 0.05em;
+  border-radius: 20em;
 }
 
 /*fin de entradas*/
 /*inicio wok*/
 .wok-p {
   display: grid;
+  align-items: center;
   grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr;
-  grid-template-rows: repeat(1, 0.1fr, 12, 0.5fr);
+  grid-template-rows: repeat(1, 0.1fr, 12, 0.3fr);
   grid-template-areas: "... ...    ...    ...    ..." "... arroz  arroz  arroz  parroz" "... agrid  agrid  agrid  pagrid" "... ...    ...    ...    ..." "suey suey   suey   suey  suey" "... ...    ...    ...    ..." "... hongo  hongo  hongo    prehongo" "... pollo  pollo  pollo    prepollo" "... cerdo  cerdo  cerdo    precerdo" "... lango  lango  lango    prelango" "... salm   salm   salm    presalm" "... lomo   lomo   lomo    prelomo" "... ...    ...    pmein  pmein";
   gap: 1em;
 }
@@ -441,7 +613,7 @@ html {
   grid-area: prelomo;
 }
 .wok-p b {
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 /*fin wok*/
@@ -504,11 +676,16 @@ html {
 
 /*fin bowls*/
 /*inicio sushi*/
+#sushi_espacio {
+  display: flex;
+  justify-content: space-around;
+}
+
 .sushi_menu {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
-  grid-template-areas: "... ...  ...  ...   ..." "deli deli deli deli ..." "p    p    p    p    p" "... x12  x24  x36 ..." "... p12  p24  p36 ..." "... x48  ...  x72 ..." "... p48  ...  p72 ..." "... p2   p2   p2 ..." "... ...  ...  ... ...";
+  grid-template-columns: 0.2fr 0.5fr 1fr 0.5fr 1fr;
+  grid-template-rows: repeat(1, 0.5fr, 7, 1fr);
+  grid-template-areas: "... ...  ...  ...   ..." "deli deli deli deli ..." "p    p    p    p    p" "... x12 p12  x24  p24" "... x36 p36  x48  p48" "... x72 p72  p2   p2" "... ... ...  p2   p2" "... ...  ...  ... ...";
   /*fin de combi 4variedades*/
 }
 .sushi_menu #deli {
@@ -553,9 +730,11 @@ html {
 
 .only_salmon {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, 0.5fr, 8, 1fr);
-  grid-template-areas: "... ...  ...   ...   ..." "only only only  only only" "on12 on12 on12  on12  on12" "... ...  on12p on12p ..." "on24 on24 on24  on24  on24" "... ...  on24p on24p ..." "on36 on36 on36  on36  on36" "... ...  on36p on36p ..." "... ...  ...   ...   ...";
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
+  grid-template-rows: repeat(1, 0.5fr, 7, 1fr);
+  grid-template-areas: "... ... ...  ...   ...   ..." "only only only  only only ..." "... on12 on12 on12  on12 on12p" "... ... ...   ...   ...  ..." "... on24 on24 on24  on24 on24p" "... ... ...   ...   ...  ..." "... on36 on36 on36  on36 on36p" "... ... ...  ...   ...   ...";
   /*fin Only Salmon*/
 }
 .only_salmon #only {
@@ -582,9 +761,9 @@ html {
 
 .combi_premium {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, 0.5fr, 5, 1 fr);
-  grid-template-areas: "... ...   ...   ...   ..." "prem prem  prem  prem  prem" "pprem pprem pprem pprem ..." "... p12   p24   p36   ..." "... p12p  p24p  p36p  ..." "... ...   ...   ...   ...";
+  grid-template-columns: 0.2fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+  grid-template-rows: repeat(1, 0.5fr, 4, 1 fr);
+  grid-template-areas: "...  ...   ...   ...   ...   ... ..." "prem prem  prem  prem  prem  ... ..." "...  pprem pprem pprem pprem ... ..." "...  p12   p12p  p24   p24p  p36 p36p" "...  ...   ...   ...   ...   ... ...";
   /*fin Combi Premiun*/
 }
 .combi_premium #prem {
@@ -614,9 +793,11 @@ html {
 
 .combi_veggie {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 0.5fr, 5, 1fr);
-  grid-template-areas: "... ...  ...   ...  ..." "veg veg  veg   veg  ..." "vegp vegp vegp  vegp vegp" "... ...  pvegp ...  ..." "... ...  ...   ...  ...";
+  grid-template-areas: "... ...  ...   ...  ..." "veg veg  veg   veg  ..." "vegp vegp vegp vegp ..." "vegp vegp vegp vegp pvegp" "... ...  ...   ...  ...";
   /*fin Combi Veggie*/
 }
 .combi_veggie #veg {
@@ -624,6 +805,7 @@ html {
 }
 .combi_veggie #vegp {
   grid-area: vegp;
+  font-size: 0.9em;
 }
 .combi_veggie #pvegp {
   grid-area: pvegp;
@@ -631,9 +813,9 @@ html {
 
 .degust {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, 0.5fr, 4, 1fr);
-  grid-template-areas: "... ... ... ... ..." "d6 d6  d6  d6  ..." "... ... p6  p6  ..." "... d6p d6p d6p ..." "... ... ... ... ...";
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: repeat(1, 2fr, 3, 1fr);
+  grid-template-areas: "... ... ... ... ..." "d6  d6  d6  d6  p6" "d6p d6p d6p d6p d6p" "... ... ... ... ...";
   /*fin Degustación*/
 }
 .degust #d6 {
@@ -651,7 +833,7 @@ html {
 #menu_rolls {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 #menu_cinco {
@@ -666,12 +848,4 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/*media querries*/
-@media (max-width: 480px) {
-  .menu_main {
-    width: 110%;
-    padding: 0.5rem;
-  }
 }/*# sourceMappingURL=estilo.css.map */
