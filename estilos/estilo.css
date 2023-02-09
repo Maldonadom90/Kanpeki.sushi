@@ -52,6 +52,11 @@ html {
 #entrada a {
   font-size: 18px;
 }
+@media screen and (max-width: 576px) {
+  #entrada a {
+    font-size: 13px;
+  }
+}
 
 /*diseño de woks*/
 #woks {
@@ -60,6 +65,11 @@ html {
 
 #woks a {
   font-size: 18px;
+}
+@media screen and (max-width: 576px) {
+  #woks a {
+    font-size: 13px;
+  }
 }
 
 /*diseño de sushi*/
@@ -70,6 +80,11 @@ html {
 #sushi a {
   font-size: 18px;
 }
+@media screen and (max-width: 576px) {
+  #sushi a {
+    font-size: 13px;
+  }
+}
 
 /*diseño contacto*/
 #contacto {
@@ -78,6 +93,11 @@ html {
 
 #contacto a {
   font-size: 18px;
+}
+@media screen and (max-width: 576px) {
+  #contacto a {
+    font-size: 13px;
+  }
 }
 
 /*diseño nav*/
@@ -418,6 +438,20 @@ html {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 576px) {
+  .redes {
+    padding: 1px;
+  }
+}
+.redes h3 {
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+@media screen and (max-width: 576px) {
+  .redes h3 {
+    font-size: 10px;
+  }
+}
 .redes .iconos-redes {
   display: flex;
   flex-direction: row;
@@ -427,18 +461,38 @@ html {
   list-style-type: none;
   gap: 1rem;
 }
+@media screen and (max-width: 576px) {
+  .redes .iconos-redes {
+    gap: 0.5rem;
+  }
+}
 .redes .instagram a {
   text-decoration: none;
   color: black;
   font-size: 45px;
 }
+@media screen and (max-width: 576px) {
+  .redes .instagram a {
+    font-size: 18px;
+  }
+}
 .redes ul > li > i {
   font-size: 30px;
+}
+@media screen and (max-width: 576px) {
+  .redes ul > li > i {
+    font-size: 18px;
+  }
 }
 
 /*diseño zona*/
 #logo_foot img {
   width: 150px;
+}
+@media screen and (max-width: 576px) {
+  #logo_foot img {
+    width: 100px;
+  }
 }
 
 /*inicio entrada*/

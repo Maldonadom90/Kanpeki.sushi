@@ -30,6 +30,10 @@ html{
 }
 #entrada a{
     font-size: 18px;
+
+    @include mobile {
+        font-size: 13px;
+    }
 }
 /*diseño de woks*/
 #woks{
@@ -37,6 +41,10 @@ html{
 }
 #woks a{
     font-size: 18px;
+
+    @include mobile {
+        font-size: 13px;
+    }
 }
 /*diseño de sushi*/
 #sushi{
@@ -44,6 +52,10 @@ html{
 }
 #sushi a{
     font-size: 18px;
+
+    @include mobile {
+        font-size: 13px;
+    }
 }
 /*diseño contacto*/
 #contacto{
@@ -51,6 +63,10 @@ html{
 }
 #contacto a{
     font-size: 18px;
+
+    @include mobile {
+        font-size: 13px;
+    }
 }
 /*diseño nav*/
 .nav{
