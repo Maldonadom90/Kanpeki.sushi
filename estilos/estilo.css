@@ -68,7 +68,7 @@ html {
 }
 @media screen and (max-width: 576px) {
   #woks a {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -204,6 +204,12 @@ html {
   background-size: 500px;
   background-position: 0% 300%;
 }
+@media screen and (max-width: 576px) {
+  #body_wok {
+    background-size: 300px;
+    background-position: 15% 250%;
+  }
+}
 
 .menu-main {
   width: 500px;
@@ -235,6 +241,11 @@ html {
   color: transparent;
   text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
 }
+@media screen and (max-width: 576px) {
+  .menu-carta .menu-titulo h2 {
+    font-size: 25px;
+  }
+}
 .menu-carta .grafitti {
   background-color: rgba(4, 191, 191, 0.8823529412);
   color: white;
@@ -243,6 +254,11 @@ html {
   align-items: center;
   border-radius: 50px;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+@media screen and (max-width: 576px) {
+  .menu-carta .grafitti {
+    font-size: 13px;
+  }
 }
 .menu-carta .precio {
   width: 70px;
@@ -253,6 +269,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .menu-carta .precio {
+    width: 50px;
+    height: 30px;
+    font-size: 13px;
+  }
 }
 
 /*pagina sushi & Bowls*/
@@ -426,6 +449,11 @@ html {
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (max-width: 576px) {
+  .foot {
+    padding: 5px;
+  }
+}
 
 /*diseño redes*/
 .redes {
@@ -436,16 +464,17 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 @media screen and (max-width: 576px) {
   .redes {
     padding: 1px;
+    margin-top: 3px;
   }
 }
 .redes h3 {
   font-size: 15px;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 576px) {
   .redes h3 {
@@ -463,7 +492,15 @@ html {
 }
 @media screen and (max-width: 576px) {
   .redes .iconos-redes {
-    gap: 0.5rem;
+    gap: 0.9rem;
+  }
+}
+.redes .iconos-redes pre {
+  font-size: 15px;
+}
+@media screen and (max-width: 576px) {
+  .redes .iconos-redes pre {
+    font-size: 9px;
   }
 }
 .redes .instagram a {
@@ -491,7 +528,7 @@ html {
 }
 @media screen and (max-width: 576px) {
   #logo_foot img {
-    width: 100px;
+    width: 80px;
   }
 }
 
@@ -536,6 +573,13 @@ html {
   grid-template-rows: 0.2fr 0.2fr 0.8fr 0.8fr 0.8fr 0.2fr;
   grid-template-areas: "...    ...    ...    ..." "spring spring spring ..." "vegg   vegg   vegg   pvegg" "cerd   cerd   cerd   pcerd" "sal    sal    sal    psal" "...    ...    ...    ...";
 }
+@media screen and (max-width: 576px) {
+  .entrada_menu {
+    grid-template-columns: 0.2fr 1fr 1fr 0.4fr;
+    grid-template-rows: 0.2fr 0.2fr 0.6fr 0.6fr 0.6fr 0.2fr;
+    grid-template-areas: "...    ...    ...    ..." "spring spring spring ..." "vegg   vegg   vegg   pvegg" "cerd   cerd   cerd   pcerd" "sal    sal    sal    psal" "...    ...    ...    ...";
+  }
+}
 .entrada_menu #spring {
   grid-area: spring;
 }
@@ -554,8 +598,18 @@ html {
   letter-spacing: 0.05em;
   border-radius: 20em;
 }
+@media screen and (max-width: 576px) {
+  .entrada_menu #spring span {
+    font-size: 13px;
+  }
+}
 .entrada_menu #vegg {
   grid-area: vegg;
+}
+@media screen and (max-width: 576px) {
+  .entrada_menu #vegg {
+    font-size: 13px;
+  }
 }
 .entrada_menu #pvegg {
   grid-area: pvegg;
@@ -563,11 +617,21 @@ html {
 .entrada_menu #cerd {
   grid-area: cerd;
 }
+@media screen and (max-width: 576px) {
+  .entrada_menu #cerd {
+    font-size: 13px;
+  }
+}
 .entrada_menu #pcerd {
   grid-area: pcerd;
 }
 .entrada_menu #sal {
   grid-area: sal;
+}
+@media screen and (max-width: 576px) {
+  .entrada_menu #sal {
+    font-size: 13px;
+  }
 }
 .entrada_menu #psal {
   grid-area: psal;
@@ -581,6 +645,11 @@ html {
 .gyoza pre {
   font-size: 1em;
 }
+@media screen and (max-width: 576px) {
+  .gyoza pre {
+    font-size: 13px;
+  }
+}
 .gyoza span {
   font-family: inherit;
   font-weight: 500;
@@ -592,18 +661,33 @@ html {
   border: none;
   box-shadow: 0 0.7em 1.5em -0.5em rgba(8, 8, 8, 0.5960784314);
   letter-spacing: 0.05em;
-  border-radius: 20em;
+  border-radius: 0.8em;
+}
+@media screen and (max-width: 576px) {
+  .gyoza span {
+    font-size: 13px;
+  }
 }
 
 /*fin de entradas*/
 /*inicio wok*/
 .wok-p {
+  font-size: 16px;
   display: grid;
   align-items: center;
   grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr;
   grid-template-rows: repeat(1, 0.1fr, 12, 0.3fr);
   grid-template-areas: "... ...    ...    ...    ..." "... arroz  arroz  arroz  parroz" "... agrid  agrid  agrid  pagrid" "... ...    ...    ...    ..." "suey suey   suey   suey  suey" "... ...    ...    ...    ..." "... hongo  hongo  hongo    prehongo" "... pollo  pollo  pollo    prepollo" "... cerdo  cerdo  cerdo    precerdo" "... lango  lango  lango    prelango" "... salm   salm   salm    presalm" "... lomo   lomo   lomo    prelomo" "... ...    ...    pmein  pmein";
   gap: 1em;
+}
+@media screen and (max-width: 576px) {
+  .wok-p {
+    font-size: 13px;
+    grid-template-columns: 0fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: repeat(1, 0.1fr, 13, 0.3fr);
+    grid-template-areas: "... ...    ...    ...   ..." "... arroz  arroz  arroz parroz" "... agrid  agrid  agrid pagrid" "... ...    ...    ...   ..." "suey suey   suey   suey suey" "... ...    ...    ...   ..." "... hongo  hongo  hongo prehongo" "... pollo  pollo  pollo prepollo" "... cerdo  cerdo  cerdo precerdo" "... lango  lango  lango prelango" "... salm   salm   salm  presalm" "... lomo   lomo   lomo  prelomo" "... ...    ...    ...   ..." "pmein pmein  pmein  pmein pmein";
+    gap: 0.5em;
+  }
 }
 .wok-p #arroz {
   grid-area: arroz;
@@ -668,6 +752,11 @@ html {
 }
 .wok-p b {
   font-size: 1em;
+}
+@media screen and (max-width: 576px) {
+  .wok-p b {
+    font-size: 0.9em;
+  }
 }
 
 /*fin wok*/

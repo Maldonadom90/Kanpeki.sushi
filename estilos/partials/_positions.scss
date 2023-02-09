@@ -47,6 +47,18 @@
     "sal    sal    sal    psal"
     "...    ...    ...    ...";
 
+    @include mobile {
+        grid-template-columns: 0.2fr 1fr 1fr 0.4fr;
+        grid-template-rows: 0.2fr 0.2fr 0.6fr 0.6fr 0.6fr 0.2fr;
+        grid-template-areas: 
+        "...    ...    ...    ..."
+        "spring spring spring ..."
+        "vegg   vegg   vegg   pvegg"
+        "cerd   cerd   cerd   pcerd"
+        "sal    sal    sal    psal"
+        "...    ...    ...    ...";
+    }
+
     #spring{
         grid-area: spring;
 
@@ -65,22 +77,38 @@
             box-shadow: 0 0.7em 1.5em -0.5em #08080898;
             letter-spacing: 0.05em;
             border-radius: 20em;
+
+            @include mobile {
+                font-size: 13px;
+            }
         }
     }
     #vegg{
         grid-area: vegg;
+
+        @include mobile {
+            font-size: 13px;
+        }
     }
     #pvegg{
         grid-area: pvegg;
     }
     #cerd{
         grid-area: cerd;
+
+        @include mobile {
+            font-size: 13px;
+        }
     }
     #pcerd{
         grid-area: pcerd;
     }
     #sal{
         grid-area: sal;
+
+        @include mobile {
+            font-size: 13px;
+        }
     }
     #psal{
         grid-area: psal;
@@ -93,6 +121,10 @@
 
     pre{
         font-size: 1em;
+
+        @include mobile {
+            font-size: 13px;
+        }
     }
 
     span{
@@ -106,13 +138,18 @@
         border: none;
         box-shadow: 0 0.7em 1.5em -0.5em #08080898;
         letter-spacing: 0.05em;
-        border-radius: 20em;
+        border-radius: 0.8em;
+
+        @include mobile {
+            font-size: 13px;
+        }
     }
 }
 /*fin de entradas*/
 
 /*inicio wok*/
 .wok-p{
+    font-size: 16px;
     display: grid;
     align-items: center;
     grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr;
@@ -132,6 +169,29 @@
     "... lomo   lomo   lomo    prelomo"
     "... ...    ...    pmein  pmein";
     gap: 1em;
+
+    @include mobile {
+        font-size: 13px;
+        grid-template-columns: 0fr 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: repeat(1, 0.1fr, 13, 0.3fr);
+        grid-template-areas: 
+        "... ...    ...    ...   ..."
+        "... arroz  arroz  arroz parroz"
+        "... agrid  agrid  agrid pagrid"
+        "... ...    ...    ...   ..."
+        "suey suey   suey   suey suey"
+        "... ...    ...    ...   ..."
+        "... hongo  hongo  hongo prehongo"
+        "... pollo  pollo  pollo prepollo"
+        "... cerdo  cerdo  cerdo precerdo"
+        "... lango  lango  lango prelango"
+        "... salm   salm   salm  presalm"
+        "... lomo   lomo   lomo  prelomo"
+        "... ...    ...    ...   ..."
+        "pmein pmein  pmein  pmein pmein";
+        gap: 0.5em;
+
+    }
     
     #arroz{
         grid-area: arroz;
@@ -197,6 +257,10 @@
 
     b{
         font-size: 1em;
+        
+        @include mobile {
+            font-size: 0.9em;
+        }
     }
 }
 /*fin wok*/
