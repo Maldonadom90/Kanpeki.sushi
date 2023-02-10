@@ -8,7 +8,7 @@
     justify-content: space-between;
 }
 #body_wok{
-    background-image: url(/imagenes/fondo5.png);
+    background-image: url(../imagenes/fondo5.png);
     background-repeat: no-repeat;
     background-size: 500px;
     background-position: 0% 300%;
@@ -98,10 +98,18 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
+        @include mobile{
+            gap: 0.8rem;
+        }
     }
 
     .cantidad{
         font-size: 1.5em;
+
+        @include mobile{
+            font-size: 1em;
+        }
     }
 }
 .sushi_imagen{
@@ -120,10 +128,6 @@
 /*pagina rolls*/
 #body_rolls{
     background-color: $Color5;
-    background-image: url(/imagenes/logo\ fondo.png);
-    background-size: 500px;
-    background-repeat: no-repeat;
-    background-position: 95% 1150%;
 
     h2{
         pre{
@@ -137,6 +141,10 @@
             background-clip: text; 
             color: transparent; 
             text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+        
+            @include mobile {
+            font-size: 25px;
+        }
         }
     }
 
@@ -146,6 +154,11 @@
         color: whitesmoke;
         padding: 5px;
         border-radius: 0.8em;
+
+        @include mobile {
+            font-size: 10px;
+            padding: 3px;
+        }
     }
     .salsa_wasabi{
         background-color: $Color5;
@@ -155,6 +168,7 @@
     }
     .precio2{
         pre{
+            font-size: 13px;
             width: 100%;
             height: 35px;
             display: flex;
@@ -173,9 +187,18 @@
     padding: 10px;
     border-radius: 0.8em;
 
+    @include mobile {
+        margin: 0px;
+        padding: 2px;
+    }
+
     img{
         width: 450px;
         border-radius: 0.8em;
+
+        @include mobile {
+            width: 300px;
+        }
     }
     }
 /*fin paginas rolls*/
@@ -189,6 +212,14 @@
 
     #mapa{
         margin-top: 25px;
+
+        @include mobile{
+            iframe{
+            width: 270px;
+        }
+        }
+
+        
     }
     }
 /*cuadrado instagram*/

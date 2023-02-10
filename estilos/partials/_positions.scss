@@ -6,19 +6,29 @@
 
     img{
         width: 50px;
+        @include mobile{
+            width: 30px;
+        }
     }
     
 }
 #boton_sushi{
-    right: -5px;
-    
+    right: 0px;
+
     img{
-        width: 130px;
+        width: 70px;
+        @include mobile {
+            width: 60px;
+        }
     }
 }
 #boton_conocenos{
+    right: 3px;
     img{
-        width: 100px;
+        width: 70px;
+        @include mobile {
+            width: 50px;
+        }
     }
 }
 
@@ -278,6 +288,11 @@
     "veggie veggie pveggie"
     "...    ing    ing";
     gap: 1em;
+
+    @include mobile {
+        font-size: 13px;
+        gap: 0.7em;
+    }
 }
 #kani{
     grid-area: kani;
@@ -340,9 +355,15 @@
 
     #deli{
         grid-area: deli;
+        @include mobile {
+            font-size: 20px;
+        }
     }
     #p{
         grid-area: p;
+        @include mobile {
+            font-size: 13px;
+        }
     }
     #x12{
         grid-area: x12;
@@ -376,6 +397,10 @@
     }
     #p2{
         grid-area: p2;
+
+        @include mobile{
+            font-size: 12px;
+        }
     }
 /*fin de combi 4variedades*/
 }
@@ -395,24 +420,50 @@
     "... on36 on36 on36  on36 on36p"
     "... ... ...  ...   ...   ...";
 
+    @include mobile{
+        grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
+        grid-template-rows: repeat(1, 0.5fr, 7, 1fr);
+        grid-template-areas: 
+        "... ... ...  ...   ...   ..."
+        "only only only  only only only"
+        "on12 on12 on12 on12  on12 on12p"
+        "... ... ...   ...   ...  ..."
+        "on24 on24 on24 on24  on24 on24p"
+        "... ... ...   ...   ...  ..."
+        "on36 on36 on36 on36  on36 on36p"
+        "... ... ...  ...   ...   ...";
+    }
+
 
     #only{
         grid-area: only;
+        @include mobile{
+            font-size: 20px;
+        }
     }
     #on12{
         grid-area: on12;
+        @include mobile{
+            font-size: 12px;
+        }
     }
     #on12p{
         grid-area: on12p;
     }
     #on24{
         grid-area: on24;
+        @include mobile{
+            font-size: 12px;
+        }
     }
     #on24p{
         grid-area: on24p;
     }
     #on36{
         grid-area: on36;
+        @include mobile{
+            font-size: 12px;
+        }
     }
     #on36p{
         grid-area: on36p;
@@ -430,11 +481,28 @@
     "...  p12   p12p  p24   p24p  p36 p36p"
     "...  ...   ...   ...   ...   ... ...";
 
+    @include mobile {
+        grid-template-columns: 0.2fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+        grid-template-rows: repeat(1, 0.5fr, 4, 1 fr);
+        grid-template-areas: 
+        "...  ...   ...   ...   ...   ... ..."
+        "prem prem  prem  prem  prem  prem ..."
+        "...  pprem pprem pprem pprem pprem ..."
+        "...  p12   p12p  p24   p24p  p36 p36p"
+        "...  ...   ...   ...   ...   ... ...";
+    }
+
     #prem{
         grid-area: prem;
+        @include mobile{
+            font-size: 20px;
+        }
     }
     #pprem{
         grid-area: pprem;
+        @include mobile{
+            font-size: 13px;
+        }
     }
     #p12{
         grid-area: p12;
@@ -469,8 +537,23 @@
     "vegp vegp vegp vegp pvegp"
     "... ...  ...   ...  ...";
 
+    @include mobile{
+        font-size: 12px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 0.5fr, 5, 1fr);
+        grid-template-areas: 
+        "... ...  ...   ...  ..."
+        "veg veg  veg   veg  veg"
+        "vegp vegp vegp vegp ..."
+        "vegp vegp vegp vegp pvegp"
+        "... ...  ...   ...  ...";
+    }
+
     #veg{
         grid-area: veg;
+        @include mobile{
+            font-size: 20px;
+        }
     }
     #vegp{
         grid-area: vegp;
@@ -491,8 +574,15 @@
     "d6p d6p d6p d6p d6p"
     "... ... ... ... ...";
 
+    @include mobile {
+        font-size: 12px;
+    }
+
     #d6{
         grid-area: d6;
+        @include mobile{
+            font-size: 20px;
+        }
     }
     #d6p{
         grid-area: d6p;
@@ -509,18 +599,30 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
+    @include mobile {
+        font-size: 12px;
+    }
 }
 #menu_cinco{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mobile {
+        font-size: 12px;
+        align-items: flex-end;
+    }
 }
 /*fin pagina rolls*/
 /*inicio pagina conocenos*/
 #conocenos{
     display: flex;
     justify-content: center;
-    align-items: center;
-
-
+    align-items: flex-start;
+}
+#contacto-kanpeki{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
