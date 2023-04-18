@@ -156,7 +156,20 @@
     }
 }
 /*fin de entradas*/
+/*diseño carrusel entradas*/
 
+.carousel-item img{
+    padding-top: 30px;
+    height: 500px;
+
+    @include tablet {
+        height: 500px;
+    }
+    @include mobile {
+        height: 400px;
+    }
+
+}
 /*inicio wok*/
 .wok-p{
     font-size: 16px;

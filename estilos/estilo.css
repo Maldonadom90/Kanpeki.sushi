@@ -104,11 +104,16 @@ html {
 .nav {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 0.7fr 0.7fr 1fr;
+  grid-template-columns: 1fr 0.3fr 0.3fr 1fr;
   grid-template-rows: repeat(8, 0.5fr);
   grid-template-areas: "... ...      ...      ..." "... logo     logo     ..." "... ...      ...      ..." "... entrada  entrada  ..." "... woks     woks     ..." "... sushi    sushi    ..." "... contacto contacto ..." "... ...      ...      ...";
   align-items: center;
   gap: 2em;
+}
+@media screen and (max-width: 760px) {
+  .nav {
+    grid-template-columns: 1fr 0.7fr 0.7fr 1fr;
+  }
 }
 
 .nav > div {
@@ -134,8 +139,9 @@ html {
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
-  font-weight: 300;
-  font-size: 10px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
   color: var(--color);
 }
 
@@ -199,10 +205,9 @@ html {
 }
 
 #body_wok {
-  background-image: url(../imagenes/fondo5.png);
-  background-repeat: no-repeat;
-  background-size: 500px;
-  background-position: 0% 300%;
+  background-image: url(/imagenes/fondo\ wok.jpg);
+  background-size: contain;
+  background-repeat: repeat;
 }
 @media screen and (max-width: 576px) {
   #body_wok {
@@ -253,7 +258,6 @@ html {
   justify-content: space-around;
   align-items: center;
   border-radius: 50px;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 @media screen and (max-width: 576px) {
   .menu-carta .grafitti {
@@ -280,7 +284,10 @@ html {
 
 /*pagina sushi & Bowls*/
 #body_sushi {
-  background-color: #91f872;
+  background-color: #ab4c93;
+  background-image: url(/imagenes/fondo\ combinados.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #body_sushi .sushi_borde {
   display: flex;
@@ -316,6 +323,9 @@ html {
 
 /*pagina rolls*/
 #body_rolls {
+  background-image: url(/imagenes/fondo\ roll.jpg);
+  background-size: cover;
+  background-repeat: repeat;
   background-color: #F2AEBB;
 }
 #body_rolls h2 pre {
@@ -722,6 +732,22 @@ html {
 }
 
 /*fin de entradas*/
+/*diseño carrusel entradas*/
+.carousel-item img {
+  padding-top: 30px;
+  height: 500px;
+}
+@media screen and (max-width: 760px) {
+  .carousel-item img {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .carousel-item img {
+    height: 400px;
+  }
+}
+
 /*inicio wok*/
 .wok-p {
   font-size: 16px;
