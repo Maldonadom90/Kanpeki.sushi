@@ -206,7 +206,7 @@ html {
 }
 
 #body_wok {
-  background-image: url(/imagenes/fondo\ wok.jpg);
+  background-image: url(../imagenes/fondo\ wok.jpg);
   background-size: cover;
   background-repeat: repeat;
 }
@@ -291,7 +291,7 @@ html {
 /*pagina sushi & Bowls*/
 #body_sushi {
   background-color: #ab4c93;
-  background-image: url(/imagenes/fondo\ combinados.jpg);
+  background-image: url(../imagenes/fondo\ combinados.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -334,7 +334,7 @@ html {
 
 /*pagina rolls*/
 #body_rolls {
-  background-image: url(/imagenes/fondo\ roll.jpg);
+  background-image: url(../imagenes/fondo\ roll.jpg);
   background-size: cover;
   background-repeat: repeat;
 }
