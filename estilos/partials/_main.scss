@@ -10,12 +10,12 @@
 
 #body_wok{
     background-image: url(/imagenes/fondo\ wok.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: repeat;
 
     @include mobile {
-        background-size: 300px;
-        background-position: 15% 250%;
+        background-size: cover;
+        background-repeat: repeat;
     }
 
 }
@@ -23,6 +23,10 @@
 .menu-main{
     width: 500px;
     padding: 1.5rem;
+
+    @include mobile{
+        padding: 0.5rem;
+    }
     }
 
 .menu-carta{
@@ -41,8 +45,8 @@
         h2{
             text-transform: uppercase;
             text-rendering: optimizeLegibility;
-            font-weight: bold; 
-            font-size: 35px; 
+            font-weight: 700; 
+            font-size: 40px; 
             background: #202020; 
             -webkit-background-clip: text; 
             -moz-background-clip: text; 
@@ -95,6 +99,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include mobile {
+        background-size: cover;
+    }
+
     .sushi_borde{
         display: flex;
         flex-direction: column;
@@ -131,13 +139,12 @@
     background-image: url(/imagenes/fondo\ roll.jpg);
     background-size: cover;
     background-repeat: repeat;
-    background-color: $Color5;
 
     h2{
         pre{
             text-transform: uppercase;
             text-rendering: optimizeLegibility;
-            font-weight: bold; 
+            font-weight: 600; 
             font-size: 35px; 
             background: #202020; 
             -webkit-background-clip: text; 
@@ -147,7 +154,7 @@
             text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
         
             @include mobile {
-            font-size: 25px;
+            font-size: 26px;
         }
         }
     }
@@ -247,25 +254,25 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
-  }
+}
 
-  .card__body {
+.card__body {
     color: $Color4;
     line-height: 1.5em;
     font-size: 1em;
-  }
-  
-  .card > :not(span) {
+}
+
+.card > :not(span) {
     transition: .3s cubic-bezier(.6,.4,0,1);
-  }
-  
-  .card > strong {
+}
+
+.card > strong {
     display: block;
     font-size: 1.4rem;
     letter-spacing: -.035em;
-  }
-  
-  .card span {
+}
+
+.card span {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -278,18 +285,18 @@
     font-weight: bold;
     top: 100%;
     transition: all .3s cubic-bezier(.6,.4,0,1);
-  }
-  
-  .card:hover span {
+}
+
+.card:hover span {
     top: 0;
     font-size: 1.2em;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     background: var(--hover-bg);
-  }
-  
-  .card:hover>div,.card:hover>strong {
+}
+
+.card:hover>div,.card:hover>strong {
     opacity: 0;
-  }
+}
 
