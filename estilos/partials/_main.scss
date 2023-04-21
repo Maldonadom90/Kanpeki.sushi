@@ -9,7 +9,7 @@
 }
 
 #body_wok{
-    background-image: url(../../imagenes/fondo\ wok.jpg);
+    background-image: url(../imagenes/fondo\ wok.jpg);
     background-size: cover;
     background-repeat: repeat;
 
@@ -21,7 +21,7 @@
 }
 
 .menu-main{
-    width: 500px;
+    width: 470px;
     padding: 1.5rem;
 
     @include mobile{
@@ -95,7 +95,7 @@
 /*pagina sushi & Bowls*/
 #body_sushi{
     background-color: $Color2;
-    background-image: url(../../imagenes/fondo\ combinados.jpg);
+    background-image: url(../imagenes/fondo\ combinados.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -136,7 +136,7 @@
 }
 /*pagina rolls*/
 #body_rolls{
-    background-image: url(../../imagenes/fondo\ roll.jpg);
+    background-image: url(../imagenes/fondo\ roll.jpg);
     background-size: cover;
     background-repeat: repeat;
 

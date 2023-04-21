@@ -161,13 +161,13 @@
 .carousel-item img{
     border-radius: 1em;
     margin-top: 30px;
-    height: 500px;
+    height: 600px;
 
     @include tablet {
         height: 500px;
     }
     @include mobile {
-        height: 400px;
+        height: 500px;
     }
 
 }
